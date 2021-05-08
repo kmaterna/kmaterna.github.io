@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Tectonic_Utils.geodesy package &mdash; Tectonic_Utils 0.0.4 documentation</title>
+  <title>Tectonic_Utils.geodesy package &mdash; Tectonic_Utils 0.0.5 documentation</title>
   
 
   
@@ -88,10 +88,10 @@
 <li><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-Tectonic_Utils.geodesy.euler_pole">Tectonic_Utils.geodesy.euler_pole module</a></li>
-<li><a class="reference internal" href="#module-Tectonic_Utils.geodesy.fault_conversion_functions">Tectonic_Utils.geodesy.fault_conversion_functions module</a></li>
 <li><a class="reference internal" href="#module-Tectonic_Utils.geodesy.fault_vector_functions">Tectonic_Utils.geodesy.fault_vector_functions module</a></li>
 <li><a class="reference internal" href="#module-Tectonic_Utils.geodesy.geojson2txt">Tectonic_Utils.geodesy.geojson2txt module</a></li>
 <li><a class="reference internal" href="#module-Tectonic_Utils.geodesy.haversine">Tectonic_Utils.geodesy.haversine module</a></li>
+<li><a class="reference internal" href="#module-Tectonic_Utils.geodesy.insar_vector_functions">Tectonic_Utils.geodesy.insar_vector_functions module</a></li>
 <li><a class="reference internal" href="#module-Tectonic_Utils.geodesy.utm_conversion">Tectonic_Utils.geodesy.utm_conversion module</a></li>
 <li><a class="reference internal" href="#module-Tectonic_Utils.geodesy">Module contents</a></li>
 </ul>
@@ -273,141 +273,6 @@ A more complex function xyz2enu(X, Y, Z, lon, lat) could be written later.</p>
 <dd class="field-odd"><p>[float, float]</p>
 </dd>
 </dl>
-</dd></dl>
-
-</div>
-<div class="section" id="module-Tectonic_Utils.geodesy.fault_conversion_functions">
-<span id="tectonic-utils-geodesy-fault-conversion-functions-module"></span><h2>Tectonic_Utils.geodesy.fault_conversion_functions module<a class="headerlink" href="#module-Tectonic_Utils.geodesy.fault_conversion_functions" title="Permalink to this headline">¶</a></h2>
-<p>The functions in this script convert between fault formats</p>
-<ul class="simple">
-<li><p>Format 1: json format for Slippy</p></li>
-<li><p>Format 2: slip distribution format for Slippy</p></li>
-<li><p>Format 3: .intxt, Kathryn Materna’s format for Elastic_stresses_py</p></li>
-</ul>
-<p>The internal format here is a dictionary containing:
-Format internal: {strike(deg), dip(deg), length(km), width(km), lon(corner), lat(corner), depth(km), rake(deg), slip(m)}
-If the fault is a receiver fault, we put slip = 0</p>
-<p>Format json: basis1, basis2, length(m), width(m), nlength, nwidth, strike, dip, position [lon, lat, dep], penalty</p>
-<p>Format slippy: lon lat depth[m] strike[deg] dip[deg] length[m] width[m] left-lateral[m] thrust[m] tensile[m]</p>
-<p>Format intxt: strike rake dip length(km) width(km) updip_corner_lon updip_corner_lat updip_corner_dep(km) slip</p>
-<dl class="py function">
-<dt id="Tectonic_Utils.geodesy.fault_conversion_functions.intxt2json">
-<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.fault_conversion_functions.</span></code><code class="sig-name descname"><span class="pre">intxt2json</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.fault_conversion_functions.intxt2json" title="Permalink to this definition">¶</a></dt>
-<dd><p>Converts .intxt faults to json faults</p>
-</dd></dl>
-
-<dl class="py function">
-<dt id="Tectonic_Utils.geodesy.fault_conversion_functions.intxt2slipdistribution">
-<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.fault_conversion_functions.</span></code><code class="sig-name descname"><span class="pre">intxt2slipdistribution</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.fault_conversion_functions.intxt2slipdistribution" title="Permalink to this definition">¶</a></dt>
-<dd><p>Converts .intxt faults to slippy faults (in progress)</p>
-</dd></dl>
-
-<dl class="py function">
-<dt id="Tectonic_Utils.geodesy.fault_conversion_functions.json2intxt">
-<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.fault_conversion_functions.</span></code><code class="sig-name descname"><span class="pre">json2intxt</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.fault_conversion_functions.json2intxt" title="Permalink to this definition">¶</a></dt>
-<dd><p>Converts json faults to .intxt faults</p>
-</dd></dl>
-
-<dl class="py function">
-<dt id="Tectonic_Utils.geodesy.fault_conversion_functions.read_faults_intxt">
-<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.fault_conversion_functions.</span></code><code class="sig-name descname"><span class="pre">read_faults_intxt</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.fault_conversion_functions.read_faults_intxt" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read all faults that are sources or receivers into a list of fault dictionaries.
-The lat/lon refer to the top left corner of the fault.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>infile</strong> (<em>string</em>) – name of input .intxt file</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>list of fault dictionaries</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>list</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="Tectonic_Utils.geodesy.fault_conversion_functions.read_faults_json">
-<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.fault_conversion_functions.</span></code><code class="sig-name descname"><span class="pre">read_faults_json</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.fault_conversion_functions.read_faults_json" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read all faults from a json file (just geometry; no slip or rake) into a list of fault dictionaries.
-It has to convert from fault center to fault corner.
-Faults read from JSON have zero slip.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>infile</strong> (<em>string</em>) – name of input json file</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>list of fault dictionaries</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>list</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="Tectonic_Utils.geodesy.fault_conversion_functions.read_slippy_distribution">
-<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.fault_conversion_functions.</span></code><code class="sig-name descname"><span class="pre">read_slippy_distribution</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.fault_conversion_functions.read_slippy_distribution" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read a file from the Slippy inversion outputs (lon[degrees] lat[degrees] depth[m] strike[degrees] dip[degrees]
-length[m] width[m] left-lateral[m] thrust[m] tensile[m] segment_num) into a list of fault dictionaries.
-Lon/lat usually refer to the center top of the fault, so it must convert the lon/lat to the top left corner.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>infile</strong> (<em>string</em>) – name of input slip distribution file</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>list of fault dictionaries</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>list</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="Tectonic_Utils.geodesy.fault_conversion_functions.slippydist2intxt">
-<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.fault_conversion_functions.</span></code><code class="sig-name descname"><span class="pre">slippydist2intxt</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.fault_conversion_functions.slippydist2intxt" title="Permalink to this definition">¶</a></dt>
-<dd><p>Converts slippy faults to .intxt faults</p>
-</dd></dl>
-
-<dl class="py function">
-<dt id="Tectonic_Utils.geodesy.fault_conversion_functions.write_faults_intxt">
-<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.fault_conversion_functions.</span></code><code class="sig-name descname"><span class="pre">write_faults_intxt</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">faults</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">receiver</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_header</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.fault_conversion_functions.write_faults_intxt" title="Permalink to this definition">¶</a></dt>
-<dd><p>Writes faults to intxt as receivers with zero slip, or sources with finite slip.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>faults</strong> (<em>list</em>) – list of fault dictionaries</p></li>
-<li><p><strong>outfile</strong> (<em>string</em>) – name of output intxt file</p></li>
-<li><p><strong>receiver</strong> (<em>bool</em>) – whether the faults are receivers (slip set to 0), default True</p></li>
-<li><p><strong>source</strong> (<em>bool</em>) – whether the faults are sources (finite slip), default False</p></li>
-<li><p><strong>write_header</strong> (<em>bool</em>) – whether to write the header line, default True</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="Tectonic_Utils.geodesy.fault_conversion_functions.write_faults_json">
-<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.fault_conversion_functions.</span></code><code class="sig-name descname"><span class="pre">write_faults_json</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">faults_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.fault_conversion_functions.write_faults_json" title="Permalink to this definition">¶</a></dt>
-<dd><p>Writes faults to json as receivers with zero slip</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>faults</strong> (<em>list</em>) – list of fault dictionaries</p></li>
-<li><p><strong>outfile</strong> (<em>string</em>) – name of output json file</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="Tectonic_Utils.geodesy.fault_conversion_functions.write_slipdistribution">
-<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.fault_conversion_functions.</span></code><code class="sig-name descname"><span class="pre">write_slipdistribution</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">faults</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.fault_conversion_functions.write_slipdistribution" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write a slip distribution for Slippy.
-lon[deg] lat[deg] depth[m] strike[deg] dip[deg] len[m] wid[m] left-lateral[m] thrust[m] tensile[m] segment_num.
-Depths are negative in meters. lon/lat refer to fault center.</p>
-<p>Function not written yet.</p>
 </dd></dl>
 
 </div>
@@ -973,6 +838,199 @@ Returns x and y in meters.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>[float, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-Tectonic_Utils.geodesy.insar_vector_functions">
+<span id="tectonic-utils-geodesy-insar-vector-functions-module"></span><h2>Tectonic_Utils.geodesy.insar_vector_functions module<a class="headerlink" href="#module-Tectonic_Utils.geodesy.insar_vector_functions" title="Permalink to this headline">¶</a></h2>
+<p>Useful utilities for look vectors and coordinate systems</p>
+<dl class="py function">
+<dt id="Tectonic_Utils.geodesy.insar_vector_functions.bearing_to_cartesian">
+<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></code><code class="sig-name descname"><span class="pre">bearing_to_cartesian</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">heading</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.bearing_to_cartesian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bearing (heading from North) to cartesian orientation CCW from east</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>heading</strong> (<em>float</em>) – CW from North, in degrees</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Cartesian direction, CCW from East, in degrees</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tectonic_Utils.geodesy.insar_vector_functions.calc_lkv_from_rdr_azimuth_incidence">
+<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></code><code class="sig-name descname"><span class="pre">calc_lkv_from_rdr_azimuth_incidence</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">azimuth</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incidence</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.calc_lkv_from_rdr_azimuth_incidence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function especially for UAVSAR interferograms to extract the lkv from azimuth/incidence
+Convention: Azimuth angle measured from North in Anti-clockwise direction, in degrees, from ground to plane
+Convention: Incidence angle measured from vertical at target
+(aka degrees from vertical at satellite) (always +ve), in degrees
+lkve, lkvn, lkvu describe vector from ground to plane</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>azimuth</strong> (<em>float</em>) – CCW from north angle of vector from ground to plane, in degrees</p></li>
+<li><p><strong>incidence</strong> (<em>float</em>) – angle from look vector to vertical, measured at the target (aka deg. from vertical at satellite)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>lkve, lkvn, lkvu, unit vector from ground to plane</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tectonic_Utils.geodesy.insar_vector_functions.calc_rdr_azimuth_incidence_from_lkv_plane_down">
+<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></code><code class="sig-name descname"><span class="pre">calc_rdr_azimuth_incidence_from_lkv_plane_down</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lkve</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lkvn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lkvu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.calc_rdr_azimuth_incidence_from_lkv_plane_down" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function especially for UAVSAR interferograms to extract the incidence angle from lkv products
+lkve, lkvn, lkvu describe vector from plane to ground
+Convention: Azimuth angle measured from North in Anti-clockwise direction, in degrees, from ground to plane
+Convention: Incidence angle measured from vertical at target
+(aka degrees from vertical at satellite) (always +ve), in degrees</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lkve</strong> (<em>float</em>) – e component of look vector FROM PLANE TO GROUND</p></li>
+<li><p><strong>lkvn</strong> (<em>float</em>) – n component of look vector FROM PLANE TO GROUND</p></li>
+<li><p><strong>lkvu</strong> (<em>float</em>) – u component of look vector FROM PLANE TO GROUND</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>azimuth, incidence, angles in degrees</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float, float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tectonic_Utils.geodesy.insar_vector_functions.cartesian_to_ccw_from_north">
+<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></code><code class="sig-name descname"><span class="pre">cartesian_to_ccw_from_north</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.cartesian_to_ccw_from_north" title="Permalink to this definition">¶</a></dt>
+<dd><p>angle minus 90, in degrees</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tectonic_Utils.geodesy.insar_vector_functions.cartesian_to_heading">
+<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></code><code class="sig-name descname"><span class="pre">cartesian_to_heading</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cartesian_angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.cartesian_to_heading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cartesian orientation (CCW from east) to heading (CW from north)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cartesian_angle</strong> (<em>float</em>) – CCW from East, in degrees</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>heading direction, CW from North, in degrees</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tectonic_Utils.geodesy.insar_vector_functions.complement_angle">
+<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></code><code class="sig-name descname"><span class="pre">complement_angle</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.complement_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>90 minus angle, in degrees</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tectonic_Utils.geodesy.insar_vector_functions.def3D_into_LOS">
+<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></code><code class="sig-name descname"><span class="pre">def3D_into_LOS</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">U_e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flight_angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incidence_angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.def3D_into_LOS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fialko, 2001, equation to project relative deformation into the LOS
+Dlos = [U_n sin(phi) - U_e cos(phi)]*sin(lamda) + U_u cos(lamda)
+[U_e, U_n, U_u] are the east, north, and up components of the deformation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>U_e</strong> (<em>float</em>) – east component of deformation</p></li>
+<li><p><strong>U_n</strong> (<em>float</em>) – north component of deformation</p></li>
+<li><p><strong>U_u</strong> (<em>float</em>) – vertical component of deformation</p></li>
+<li><p><strong>flight_angle</strong> (<em>float</em>) – azimuth of satellite heading vector in degrees, CW from north</p></li>
+<li><p><strong>incidence_angle</strong> (<em>float</em>) – local incidence angle at the reflector (usually angle from the vertical), in degrees</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>los deformation (in same units as U_e)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tectonic_Utils.geodesy.insar_vector_functions.flight_incidence_angles2look_vector">
+<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></code><code class="sig-name descname"><span class="pre">flight_incidence_angles2look_vector</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flight_angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incidence_angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.flight_incidence_angles2look_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>General InSAR look vector math function, assuming right-looking satellite
+lkv_e, lkv_n, lkv_u are the components of the look vector from ground to satellite</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flight_angle</strong> (<em>float</em>) – heading, clockwise from north, in degrees</p></li>
+<li><p><strong>incidence_angle</strong> (<em>float</em>) – angle between look vector and vertical, in degrees</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[lkv_e, lkv_n, lkv_u]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tectonic_Utils.geodesy.insar_vector_functions.look_vector2flight_incidence_angles">
+<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></code><code class="sig-name descname"><span class="pre">look_vector2flight_incidence_angles</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lkv_e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lkv_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lkv_u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.look_vector2flight_incidence_angles" title="Permalink to this definition">¶</a></dt>
+<dd><p>General InSAR look vector math function, assuming right-looking satellite
+lkv_e, lkv_n, lkv_u are the components of the look vector from ground to satellite
+incidence angle is angle between look vector and vertical in degrees
+Flight angle is clockwise from north in degrees</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lkv_e</strong> (<em>float</em>) – e component of look vector from ground to satellite</p></li>
+<li><p><strong>lkv_n</strong> (<em>float</em>) – n component of look vector from ground to satellite</p></li>
+<li><p><strong>lkv_u</strong> (<em>float</em>) – u component of look vector from ground to satellite</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[flight_angle, incidence_angle] in degrees</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tectonic_Utils.geodesy.insar_vector_functions.normalize_vector">
+<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></code><code class="sig-name descname"><span class="pre">normalize_vector</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lkve</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lkvn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lkvu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.normalize_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take a 3-component vector and normalize its components to a unit vector</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tectonic_Utils.geodesy.insar_vector_functions.rotate_vector_by_angle">
+<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></code><code class="sig-name descname"><span class="pre">rotate_vector_by_angle</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.rotate_vector_by_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>rotate a vector by an angle theta, in degrees CCW from East</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x0</strong> (<em>float</em>) – x component of vector</p></li>
+<li><p><strong>y0</strong> (<em>float</em>) – y component of vector</p></li>
+<li><p><strong>theta</strong> (<em>float</em>) – angle to rotate by, in degrees CCW from East like the mathematical definition</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>xprime, yprime</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float, float</p>
 </dd>
 </dl>
 </dd></dl>

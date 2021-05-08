@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Tectonic_Utils.seismo package &mdash; Tectonic_Utils 0.0.4 documentation</title>
+  <title>Tectonic_Utils.seismo package &mdash; Tectonic_Utils 0.0.5 documentation</title>
   
 
   
@@ -225,13 +225,16 @@ Returns two matricies.</p>
 <dl class="py function">
 <dt id="Tectonic_Utils.seismo.MT_calculations.get_percent_double_couple">
 <code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.seismo.MT_calculations.</span></code><code class="sig-name descname"><span class="pre">get_percent_double_couple</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MT</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.get_percent_double_couple" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the percent double couple and percent clvd moment from a deviatoric moment tensor</p>
+<dd><p>Get the percent double couple and percent clvd moment from a deviatoric moment tensor.
+When isotropic term is involved, this can get more complicated and there are several approaches.
+See Shearer equation 9.17 for epsilon.
+See Vavrycuk, 2001 for other approaches when isotropic component is involved.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="Tectonic_Utils.seismo.MT_calculations.get_scalar_moments">
-<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.seismo.MT_calculations.</span></code><code class="sig-name descname"><span class="pre">get_scalar_moments</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MT</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.get_scalar_moments" title="Permalink to this definition">¶</a></dt>
-<dd><p>return isotropic, clvd, and double couple moments</p>
+<dt id="Tectonic_Utils.seismo.MT_calculations.get_total_scalar_moment">
+<code class="sig-prename descclassname"><span class="pre">Tectonic_Utils.seismo.MT_calculations.</span></code><code class="sig-name descname"><span class="pre">get_total_scalar_moment</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MT</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.get_total_scalar_moment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shearer Equation 9.8: quadratic sum of element of moment tensor components, in newton-meters</p>
 </dd></dl>
 
 </div>

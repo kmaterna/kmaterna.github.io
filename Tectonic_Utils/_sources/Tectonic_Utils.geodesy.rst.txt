@@ -20,14 +20,6 @@ Tectonic\_Utils.geodesy.euler\_pole module
    :undoc-members:
    :show-inheritance:
 
-Tectonic\_Utils.geodesy.fault\_conversion\_functions module
------------------------------------------------------------
-
-.. automodule:: Tectonic_Utils.geodesy.fault_conversion_functions
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 Tectonic\_Utils.geodesy.fault\_vector\_functions module
 -------------------------------------------------------
 
@@ -48,6 +40,14 @@ Tectonic\_Utils.geodesy.haversine module
 ----------------------------------------
 
 .. automodule:: Tectonic_Utils.geodesy.haversine
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Tectonic\_Utils.geodesy.insar\_vector\_functions module
+-------------------------------------------------------
+
+.. automodule:: Tectonic_Utils.geodesy.insar_vector_functions
    :members:
    :undoc-members:
    :show-inheritance:
