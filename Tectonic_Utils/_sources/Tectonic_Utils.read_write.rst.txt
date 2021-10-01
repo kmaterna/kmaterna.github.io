@@ -1,6 +1,14 @@
 Tectonic\_Utils.read\_write package
 ===================================
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   Tectonic_Utils.read_write.test
+
 Submodules
 ----------
 
