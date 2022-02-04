@@ -181,37 +181,42 @@
 <div class="section" id="module-Tectonic_Utils.geodesy.datums">
 <span id="tectonic-utils-geodesy-datums-module"></span><h2>Tectonic_Utils.geodesy.datums module<a class="headerlink" href="#module-Tectonic_Utils.geodesy.datums" title="Permalink to this headline">¶</a></h2>
 <p>Convert between local enu, local llh, and global xyz coordinates
-Translated from the Matlab toolkit of Paul Segall and lab.</p>
+Translated from the Matlab toolkit of P. Segall and lab.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.datums.get_datums">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.datums.</span></span><span class="sig-name descname"><span class="pre">get_datums</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.datums.get_datums" title="Permalink to this definition">¶</a></dt>
-<dd><dl>
-<dt>DATUMS   Returns da, df, dX, dY, dZ given a specific datum.</dt><dd><p>DATUMVALUE=datums(DATUMNAMES) returns the datum parameters for
-the datum specified by char or cell array DATUMNAMES.  These
-parameters are defined as differences to the WGS-84 ellipsoid:</p>
+<dd><p>Returns da, df, dX, dY, dZ given a specific datum.
+DATUMVALUE=data(DATUMNAMES) returns the datum parameters for datum specified by string array DATUMNAMES.
+These parameters are defined as differences to the WGS-84 ellipsoid:</p>
 <blockquote>
-<div><p>da = WGS-84 equatorial radius minus the specified datum equatorial radius (meters)
-df = WGS-84 flattening minus the specified datum flattening
-dX = X-coordinate of WGS-84 geocenter minus the specified datum X-coordinate (meters)
-dY = Y-coordinate of WGS-84 geocenter minus the specified datum Y-coordinate (meters)
-dZ = Z-coordinate of WGS-84 geocenter minus the specified datum Z-coordinate (meters)</p>
+<div><ul class="simple">
+<li><p>da = WGS-84 equatorial radius minus the specified datum equatorial radius (meters)</p></li>
+<li><p>df = WGS-84 flattening minus the specified datum flattening</p></li>
+<li><p>dX = X-coordinate of WGS-84 geocenter minus the specified datum X-coordinate (meters)</p></li>
+<li><p>dY = Y-coordinate of WGS-84 geocenter minus the specified datum Y-coordinate (meters)</p></li>
+<li><p>dZ = Z-coordinate of WGS-84 geocenter minus the specified datum Z-coordinate (meters)</p></li>
+</ul>
 </div></blockquote>
 <dl class="simple">
-<dt>For reference:</dt><dd><p>WGS-84 Equatorial Radius (a) = 6378137.0
-WGS-84 Flattening (f) = 1/298.257223563</p>
+<dt>For reference:</dt><dd><ul class="simple">
+<li><p>WGS-84 Equatorial Radius (a) = 6378137.0</p></li>
+<li><p>WGS-84 Flattening (f) = 1/298.257223563</p></li>
+</ul>
 </dd>
 </dl>
 <p>Calling the function without input arguments returns a list of available datums.
 Unmatched datums return NaNs.</p>
-</dd>
-</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>names</strong> (<em>string</em>) – string</p>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>5 numbers representing the chosen datum relative to WGS-84</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array</p>
+</dd>
 </dl>
-<p>:returns : 5 numbers representing the chosen datum relative to WGS-84
-:rtype : array</p>
 </dd></dl>
 
 </div>
@@ -986,6 +991,14 @@ Convention: Incidence angle measured from vertical at target
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.insar_vector_functions.cartesian_to_ccw_from_north">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></span><span class="sig-name descname"><span class="pre">cartesian_to_ccw_from_north</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.cartesian_to_ccw_from_north" title="Permalink to this definition">¶</a></dt>
 <dd><p>angle minus 90, in degrees</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> – degrees</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>angle in degrees</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -1009,6 +1022,14 @@ Convention: Incidence angle measured from vertical at target
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.insar_vector_functions.complement_angle">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></span><span class="sig-name descname"><span class="pre">complement_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.complement_angle" title="Permalink to this definition">¶</a></dt>
 <dd><p>90 minus angle, in degrees</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> – degrees</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>angle in degrees</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -1085,6 +1106,22 @@ Flight angle is clockwise from north in degrees</p>
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.insar_vector_functions.normalize_vector">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></span><span class="sig-name descname"><span class="pre">normalize_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lkve</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lkvn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lkvu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.normalize_vector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Take a 3-component vector and normalize its components to a unit vector</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tectonic_Utils.geodesy.insar_vector_functions.proj_los_into_vertical_no_horiz">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></span><span class="sig-name descname"><span class="pre">proj_los_into_vertical_no_horiz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">los</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lkv</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.proj_los_into_vertical_no_horiz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Project LOS deformation into a pseudo-vertical deformation,
+assuming horizontal deformation is zero.
+Compute the vertical deformation needed to produce given LOS deformation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>los</strong> – float</p></li>
+<li><p><strong>lkv</strong> – list of 3 floats, normalized look vector components E, N, U</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">

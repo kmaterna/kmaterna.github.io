@@ -175,7 +175,7 @@
 </div>
 <div class="section" id="module-Tectonic_Utils.read_write.general_python_io_functions">
 <span id="tectonic-utils-read-write-general-python-io-functions-module"></span><h2>Tectonic_Utils.read_write.general_python_io_functions module<a class="headerlink" href="#module-Tectonic_Utils.read_write.general_python_io_functions" title="Permalink to this headline">¶</a></h2>
-<p>Functions to read common file types into structures in Pythin
+<p>Functions to read common file types into structures in Python.
 Example: a multi-segment file with polygons or lines, as could be used in GMT</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.general_python_io_functions.read_gmt_multisegment_latlon">
@@ -208,24 +208,51 @@ The assumption is 2D Netcdf files with 3 variables, in x-y-z order.</p>
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.flip_if_necessary">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.read_write.netcdf_read_write.</span></span><span class="sig-name descname"><span class="pre">flip_if_necessary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.flip_if_necessary" title="Permalink to this definition">¶</a></dt>
 <dd><p>If netcdf3 file is stored with xinc or yinc backwards, we replace with a copy that flips the affected axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>string</em>) – name of file</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.give_metrics_on_grd">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.read_write.netcdf_read_write.</span></span><span class="sig-name descname"><span class="pre">give_metrics_on_grd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.give_metrics_on_grd" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print shape, min/max, and NaN metrics on a netcdf grid file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>string</em>) – name of grd file</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.parse_pixelnode_registration">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.read_write.netcdf_read_write.</span></span><span class="sig-name descname"><span class="pre">parse_pixelnode_registration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.parse_pixelnode_registration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ensure pixel node registration for netcdf file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>string</em>) – name of file</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.produce_output_TS_grids">
-<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.read_write.netcdf_read_write.</span></span><span class="sig-name descname"><span class="pre">produce_output_TS_grids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ydata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timearray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zunits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outdir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.produce_output_TS_grids" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.read_write.netcdf_read_write.</span></span><span class="sig-name descname"><span class="pre">produce_output_TS_grids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ydata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timearray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zunits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.produce_output_TS_grids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write many netcdf3 files, one for each step of a timearray. Each file will be named with a datetime suffix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xdata</strong> – 1D array of floats</p></li>
+<li><p><strong>ydata</strong> – 1D array of floats</p></li>
+<li><p><strong>zdata</strong> – 3D array of floats</p></li>
+<li><p><strong>timearray</strong> – 1D array of anything</p></li>
+<li><p><strong>zunits</strong> – string</p></li>
+<li><p><strong>outfile</strong> – string, filename</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -240,17 +267,28 @@ Safer to use write_netcdf4().</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.produce_output_timeseries">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.read_write.netcdf_read_write.</span></span><span class="sig-name descname"><span class="pre">produce_output_timeseries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ydata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timearray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zunits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">netcdfname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.produce_output_timeseries" title="Permalink to this definition">¶</a></dt>
-<dd><p>”
-Write dataset with t, x, y, z into large 3D netcdf.
+<dd><p>Write dataset with t, x, y, z into large 3D netcdf.
 Each 2D slice is the displacement at a particular time, associated with a time series.
 zdata comes in as a 2D array where each element is a timeseries (1D array), so it must be re-packaged into
 3D array before we save it.
 Broke during long SoCal experiment for some reason. f.close() didn’t work.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xdata</strong> – 1D array of floats</p></li>
+<li><p><strong>ydata</strong> – 1D array of floats</p></li>
+<li><p><strong>zdata</strong> – 3D array of floats</p></li>
+<li><p><strong>timearray</strong> – 1D array of anything</p></li>
+<li><p><strong>zunits</strong> – string</p></li>
+<li><p><strong>netcdfname</strong> – string, filename</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.properly_parse_variables">
-<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.read_write.netcdf_read_write.</span></span><span class="sig-name descname"><span class="pre">properly_parse_variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.properly_parse_variables" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.properly_parse_three_variables">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.read_write.netcdf_read_write.</span></span><span class="sig-name descname"><span class="pre">properly_parse_three_variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.properly_parse_three_variables" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set proper ordering for known keys in a netcdf file. Options: [x, y, z]; [lon, lat, z]; [longitude, latitude, z].</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -342,12 +380,30 @@ Broke during long SoCal experiment for some reason. f.close() didn’t work.</p>
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.read_write.netcdf_read_write.</span></span><span class="sig-name descname"><span class="pre">write_netcdf4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.write_netcdf4" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writing PIXEL NODE registered netcdf4 file from numpy array.
 Internal strategy: send out to a binary file and make GMT convert to netcdf.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – 1D array of floats</p></li>
+<li><p><strong>y</strong> – 1D array of floats</p></li>
+<li><p><strong>z</strong> – 2D array of floats</p></li>
+<li><p><strong>outfile</strong> – filename, string</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.write_temp_output_txt">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.read_write.netcdf_read_write.</span></span><span class="sig-name descname"><span class="pre">write_temp_output_txt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.write_temp_output_txt" title="Permalink to this definition">¶</a></dt>
 <dd><p>A helper function for dumping grid data into pixel-node-registered grd files</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z</strong> – 2D array of floats</p></li>
+<li><p><strong>outfile</strong> – string, filename</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
