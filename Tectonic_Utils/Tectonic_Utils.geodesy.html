@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Tectonic_Utils.geodesy package &mdash; Tectonic_Utils 0.0.8 documentation</title>
+  <title>Tectonic_Utils.geodesy package &mdash; Tectonic_Utils 0.0.10 documentation</title>
   
 
   
@@ -40,7 +40,9 @@
 
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tectonic_Utils.seismo package" href="Tectonic_Utils.seismo.html" />
+    <link rel="prev" title="Welcome to Tectonic_Utils’s documentation" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -85,24 +87,24 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Tectonic_Utils.geodesy package</a><ul>
-<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-Tectonic_Utils.geodesy.datums">Tectonic_Utils.geodesy.datums module</a></li>
-<li><a class="reference internal" href="#module-Tectonic_Utils.geodesy.euler_pole">Tectonic_Utils.geodesy.euler_pole module</a></li>
-<li><a class="reference internal" href="#module-Tectonic_Utils.geodesy.fault_vector_functions">Tectonic_Utils.geodesy.fault_vector_functions module</a></li>
-<li><a class="reference internal" href="#module-Tectonic_Utils.geodesy.geojson2txt">Tectonic_Utils.geodesy.geojson2txt module</a></li>
-<li><a class="reference internal" href="#module-Tectonic_Utils.geodesy.haversine">Tectonic_Utils.geodesy.haversine module</a></li>
-<li><a class="reference internal" href="#module-Tectonic_Utils.geodesy.insar_vector_functions">Tectonic_Utils.geodesy.insar_vector_functions module</a></li>
-<li><a class="reference internal" href="#module-Tectonic_Utils.geodesy.utm_conversion">Tectonic_Utils.geodesy.utm_conversion module</a></li>
-<li><a class="reference internal" href="#module-Tectonic_Utils.geodesy.xyz2llh">Tectonic_Utils.geodesy.xyz2llh module</a></li>
-<li><a class="reference internal" href="#module-Tectonic_Utils.geodesy">Module contents</a></li>
+              <p class="caption"><span class="caption-text">Library Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tectonic_Utils.geodesy package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.geodesy.datums">datums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.geodesy.euler_pole">euler_pole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.geodesy.fault_vector_functions">fault_vector_functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.geodesy.geojson2txt">geojson2txt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.geodesy.haversine">haversine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.geodesy.insar_vector_functions">insar_vector_functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.geodesy.linear_elastic">linear_elastic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.geodesy.utm_conversion">utm_conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.geodesy.xyz2llh">xyz2llh</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Tectonic_Utils.seismo.html">Tectonic_Utils.seismo package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tectonic_Utils.read_write.html">Tectonic_Utils.read_write package</a></li>
 </ul>
-</div>
+
             
           
         </div>
@@ -170,18 +172,10 @@
             
   <div class="section" id="tectonic-utils-geodesy-package">
 <h1>Tectonic_Utils.geodesy package<a class="headerlink" href="#tectonic-utils-geodesy-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-</div>
-</div>
-<div class="section" id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
 <div class="section" id="module-Tectonic_Utils.geodesy.datums">
-<span id="tectonic-utils-geodesy-datums-module"></span><h2>Tectonic_Utils.geodesy.datums module<a class="headerlink" href="#module-Tectonic_Utils.geodesy.datums" title="Permalink to this headline">¶</a></h2>
+<span id="datums"></span><h2>datums<a class="headerlink" href="#module-Tectonic_Utils.geodesy.datums" title="Permalink to this headline">¶</a></h2>
 <p>Convert between local enu, local llh, and global xyz coordinates
-Translated from the Matlab toolkit of P. Segall and lab.</p>
+Translated from the Matlab toolkit of the Segall lab.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.datums.get_datums">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.datums.</span></span><span class="sig-name descname"><span class="pre">get_datums</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.datums.get_datums" title="Permalink to this definition">¶</a></dt>
@@ -211,7 +205,7 @@ Unmatched datums return NaNs.</p>
 <dd class="field-odd"><p><strong>names</strong> (<em>string</em>) – string</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>5 numbers representing the chosen datum relative to WGS-84</p>
+<dd class="field-even"><p>5 floats representing the chosen datum relative to WGS-84</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>array</p>
@@ -221,12 +215,23 @@ Unmatched datums return NaNs.</p>
 
 </div>
 <div class="section" id="module-Tectonic_Utils.geodesy.euler_pole">
-<span id="tectonic-utils-geodesy-euler-pole-module"></span><h2>Tectonic_Utils.geodesy.euler_pole module<a class="headerlink" href="#module-Tectonic_Utils.geodesy.euler_pole" title="Permalink to this headline">¶</a></h2>
-<p>Functions to rotate a point by a known euler pole.</p>
+<span id="euler-pole"></span><h2>euler_pole<a class="headerlink" href="#module-Tectonic_Utils.geodesy.euler_pole" title="Permalink to this headline">¶</a></h2>
+<p>Functions to rotate a point by a known Euler pole.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.euler_pole.degma2radyr">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.euler_pole.</span></span><span class="sig-name descname"><span class="pre">degma2radyr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">omega</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.euler_pole.degma2radyr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert omega from degrees/Ma to radians/yr</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>omega</strong> (<em>float</em>) – rotation rate in degrees per million years</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>rotation rate in radians per year</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -287,7 +292,7 @@ The resulting velocity is assumed to be horizontal.</p>
 <dd class="field-even"><p>[e_velocity, n_velocity, u_velocity] of point in rotated reference frame, in mm/yr</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>array_like</p>
+<dd class="field-odd"><p>[float, float, float]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -318,7 +323,7 @@ A more complex function xyz2enu(X, Y, Z, lon, lat) could be written later.</p>
 
 </div>
 <div class="section" id="module-Tectonic_Utils.geodesy.fault_vector_functions">
-<span id="tectonic-utils-geodesy-fault-vector-functions-module"></span><h2>Tectonic_Utils.geodesy.fault_vector_functions module<a class="headerlink" href="#module-Tectonic_Utils.geodesy.fault_vector_functions" title="Permalink to this headline">¶</a></h2>
+<span id="fault-vector-functions"></span><h2>fault_vector_functions<a class="headerlink" href="#module-Tectonic_Utils.geodesy.fault_vector_functions" title="Permalink to this headline">¶</a></h2>
 <p>Useful utilities for defining fault planes and coordinate systems</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.fault_vector_functions.add_vector_to_point">
@@ -658,6 +663,26 @@ Will return 0 if dipslip,strikeslip == 0,0</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="Tectonic_Utils.geodesy.fault_vector_functions.simple_cross_product">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.fault_vector_functions.</span></span><span class="sig-name descname"><span class="pre">simple_cross_product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.fault_vector_functions.simple_cross_product" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implements the simple cross product for 2 vectors in 3-D space</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> – array-like, 3-component vector</p></li>
+<li><p><strong>b</strong> – array-like, 3-component vector</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>3-component array, [x, y, z]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[float, float, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.fault_vector_functions.xy2lonlat">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.fault_vector_functions.</span></span><span class="sig-name descname"><span class="pre">xy2lonlat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reflon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reflat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.fault_vector_functions.xy2lonlat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert cartesian x/y coordinates into lon/lat coordinates using reference point.</p>
@@ -703,7 +728,7 @@ Will return 0 if dipslip,strikeslip == 0,0</p>
 
 </div>
 <div class="section" id="module-Tectonic_Utils.geodesy.geojson2txt">
-<span id="tectonic-utils-geodesy-geojson2txt-module"></span><h2>Tectonic_Utils.geodesy.geojson2txt module<a class="headerlink" href="#module-Tectonic_Utils.geodesy.geojson2txt" title="Permalink to this headline">¶</a></h2>
+<span id="geojson2txt"></span><h2>geojson2txt<a class="headerlink" href="#module-Tectonic_Utils.geodesy.geojson2txt" title="Permalink to this headline">¶</a></h2>
 <p>This script contains utility functions to convert between two different InSAR data representations:</p>
 <ul class="simple">
 <li><p>geojson, produced by Kite after downsampling</p></li>
@@ -812,7 +837,7 @@ Will return 0 if dipslip,strikeslip == 0,0</p>
 
 </div>
 <div class="section" id="module-Tectonic_Utils.geodesy.haversine">
-<span id="tectonic-utils-geodesy-haversine-module"></span><h2>Tectonic_Utils.geodesy.haversine module<a class="headerlink" href="#module-Tectonic_Utils.geodesy.haversine" title="Permalink to this headline">¶</a></h2>
+<span id="haversine"></span><h2>haversine<a class="headerlink" href="#module-Tectonic_Utils.geodesy.haversine" title="Permalink to this headline">¶</a></h2>
 <p>Haversine formula example in Python. Original author Wayne Dyck.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.haversine.add_vector_to_coords">
@@ -922,7 +947,7 @@ Returns x and y in meters.</p>
 
 </div>
 <div class="section" id="module-Tectonic_Utils.geodesy.insar_vector_functions">
-<span id="tectonic-utils-geodesy-insar-vector-functions-module"></span><h2>Tectonic_Utils.geodesy.insar_vector_functions module<a class="headerlink" href="#module-Tectonic_Utils.geodesy.insar_vector_functions" title="Permalink to this headline">¶</a></h2>
+<span id="insar-vector-functions"></span><h2>insar_vector_functions<a class="headerlink" href="#module-Tectonic_Utils.geodesy.insar_vector_functions" title="Permalink to this headline">¶</a></h2>
 <p>Useful utilities for look vectors and coordinate systems</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.insar_vector_functions.bearing_to_cartesian">
@@ -944,11 +969,11 @@ Returns x and y in meters.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.insar_vector_functions.calc_lkv_from_rdr_azimuth_incidence">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></span><span class="sig-name descname"><span class="pre">calc_lkv_from_rdr_azimuth_incidence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">azimuth</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incidence</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.calc_lkv_from_rdr_azimuth_incidence" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function especially for UAVSAR interferograms to extract the lkv from azimuth/incidence
-Convention: Azimuth angle measured from North in Anti-clockwise direction, in degrees, from ground to plane
+<dd><p>Function especially for UAVSAR interferograms to extract the lkv from azimuth/incidence.
+Convention: Azimuth angle measured from North in Anti-clockwise direction, in degrees, from ground to plane.
 Convention: Incidence angle measured from vertical at target
-(aka degrees from vertical at satellite) (always +ve), in degrees
-lkve, lkvn, lkvu describe vector from ground to plane</p>
+(aka degrees from vertical at satellite) (always +ve), in degrees.
+lkve, lkvn, lkvu describe vector from ground to plane.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -966,10 +991,10 @@ lkve, lkvn, lkvu describe vector from ground to plane</p>
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.insar_vector_functions.calc_rdr_azimuth_incidence_from_lkv_plane_down">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></span><span class="sig-name descname"><span class="pre">calc_rdr_azimuth_incidence_from_lkv_plane_down</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lkve</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lkvn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lkvu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.calc_rdr_azimuth_incidence_from_lkv_plane_down" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function especially for UAVSAR interferograms to extract the incidence angle from lkv products
-lkve, lkvn, lkvu describe vector from plane to ground
-Convention: Azimuth angle measured from North in Anti-clockwise direction, in degrees, from ground to plane
+lkve, lkvn, lkvu describe vector from plane to ground.
+Convention: Azimuth angle measured from North in Anti-clockwise direction, in degrees, from ground to plane.
 Convention: Incidence angle measured from vertical at target
-(aka degrees from vertical at satellite) (always +ve), in degrees</p>
+(aka degrees from vertical at satellite) (always +ve), in degrees.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1035,8 +1060,8 @@ Convention: Incidence angle measured from vertical at target
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.insar_vector_functions.def3D_into_LOS">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></span><span class="sig-name descname"><span class="pre">def3D_into_LOS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">U_e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flight_angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incidence_angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.def3D_into_LOS" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fialko, 2001, equation to project relative deformation into the LOS
-Dlos = [U_n sin(phi) - U_e cos(phi)]*sin(lamda) + U_u cos(lamda)
+<dd><p>Fialko, 2001, equation to project relative deformation into the LOS.
+Dlos = [U_n sin(phi) - U_e cos(phi)]*sin(lamda) + U_u cos(lamda).
 [U_e, U_n, U_u] are the east, north, and up components of the deformation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1060,8 +1085,8 @@ Dlos = [U_n sin(phi) - U_e cos(phi)]*sin(lamda) + U_u cos(lamda)
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.insar_vector_functions.flight_incidence_angles2look_vector">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></span><span class="sig-name descname"><span class="pre">flight_incidence_angles2look_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flight_angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incidence_angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.flight_incidence_angles2look_vector" title="Permalink to this definition">¶</a></dt>
-<dd><p>General InSAR look vector math function, assuming right-looking satellite
-lkv_e, lkv_n, lkv_u are the components of the look vector from ground to satellite</p>
+<dd><p>General InSAR look vector math function, assuming right-looking satellite.
+lkv_e, lkv_n, lkv_u are the components of the look vector from ground to satellite.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1079,12 +1104,40 @@ lkv_e, lkv_n, lkv_u are the components of the look vector from ground to satelli
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="Tectonic_Utils.geodesy.insar_vector_functions.get_unit_vector_from_angle">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></span><span class="sig-name descname"><span class="pre">get_unit_vector_from_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.get_unit_vector_from_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the unit vector associated with a cartesian angle (CCW from east in degrees)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> – degrees CW from North</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of two floats, x-component and y-component of unit vector</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tectonic_Utils.geodesy.insar_vector_functions.get_unit_vector_from_heading">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></span><span class="sig-name descname"><span class="pre">get_unit_vector_from_heading</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">heading</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.get_unit_vector_from_heading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the unit vector associated with a heading angle (CW from north in degrees)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>heading</strong> – degrees CW from North</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of two floats, x-component and y-component of unit vector</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.insar_vector_functions.look_vector2flight_incidence_angles">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.insar_vector_functions.</span></span><span class="sig-name descname"><span class="pre">look_vector2flight_incidence_angles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lkv_e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lkv_n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lkv_u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.look_vector2flight_incidence_angles" title="Permalink to this definition">¶</a></dt>
-<dd><p>General InSAR look vector math function, assuming right-looking satellite
-lkv_e, lkv_n, lkv_u are the components of the look vector from ground to satellite
-incidence angle is angle between look vector and vertical in degrees
-Flight angle is clockwise from north in degrees</p>
+<dd><p>General InSAR look vector math function, assuming right-looking satellite.
+lkv_e, lkv_n, lkv_u are the components of the look vector from ground to satellite.
+incidence angle is angle between look vector and vertical in degrees.
+Flight angle is clockwise from north in degrees.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1146,9 +1199,295 @@ Compute the vertical deformation needed to produce given LOS deformation.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="module-Tectonic_Utils.geodesy.linear_elastic">
+<span id="linear-elastic"></span><h2>linear_elastic<a class="headerlink" href="#module-Tectonic_Utils.geodesy.linear_elastic" title="Permalink to this headline">¶</a></h2>
+<p>Theory: Conversion functions between the six fundamental material parameters in 3D Linear elasticity.
+Example: <a class="reference external" href="https://en.wikipedia.org/wiki/Elastic_modulus">https://en.wikipedia.org/wiki/Elastic_modulus</a></p>
+<dl class="py function">
+<dt class="sig sig-object py" id="Tectonic_Utils.geodesy.linear_elastic.get_constants_from_bulk_and_lame1">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.linear_elastic.</span></span><span class="sig-name descname"><span class="pre">get_constants_from_bulk_and_lame1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">K</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lame1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_bulk_and_lame1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given Bulk modulus (K) and lame1 (lambda), what are the other elastic constants?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>K</strong> – bulk modulus</p></li>
+<li><p><strong>lame1</strong> – lame’s first parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[E, G, poisson’s ratio, and p-wave modulus]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of 4 floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tectonic_Utils.geodesy.linear_elastic.get_constants_from_bulk_and_pr">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.linear_elastic.</span></span><span class="sig-name descname"><span class="pre">get_constants_from_bulk_and_pr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">K</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_bulk_and_pr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given Bulk modulus (K) and poisson’s ratio (nu), what are the other elastic constants?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>K</strong> – bulk modulus</p></li>
+<li><p><strong>nu</strong> – poisson’s ratio</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[E, G, lame1, and p-wave modulus]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of 4 floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tectonic_Utils.geodesy.linear_elastic.get_constants_from_bulk_and_pwave">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.linear_elastic.</span></span><span class="sig-name descname"><span class="pre">get_constants_from_bulk_and_pwave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">K</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_bulk_and_pwave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given Bulk modulus (K) and P-wave modulus (M), what are the other elastic constants?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>K</strong> – bulk modulus</p></li>
+<li><p><strong>M</strong> – p-wave modulus</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[E, G, lame1, and poisson’s ratio]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of 4 floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tectonic_Utils.geodesy.linear_elastic.get_constants_from_bulk_and_shear">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.linear_elastic.</span></span><span class="sig-name descname"><span class="pre">get_constants_from_bulk_and_shear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">K</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_bulk_and_shear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given Bulk modulus (K) and shear modulus (G), what are the other elastic constants?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>K</strong> – bulk modulus</p></li>
+<li><p><strong>G</strong> – shear modulus</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[E, lame1, poisson’s ratio, and p-wave modulus]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of 4 floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tectonic_Utils.geodesy.linear_elastic.get_constants_from_bulk_and_youngs">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.linear_elastic.</span></span><span class="sig-name descname"><span class="pre">get_constants_from_bulk_and_youngs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">K</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_bulk_and_youngs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given Bulk (K) and Young’s (E) moduli, what are the other elastic constants?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>K</strong> – bulk modulus</p></li>
+<li><p><strong>E</strong> – young’s modulus</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[lame1, G, poisson’s ratio, and p-wave modulus]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of 4 floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tectonic_Utils.geodesy.linear_elastic.get_constants_from_lame1_and_nu">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.linear_elastic.</span></span><span class="sig-name descname"><span class="pre">get_constants_from_lame1_and_nu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lame1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_lame1_and_nu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given lame1 (lambda) and poisson’s ratio (nu), what are the other elastic constants?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lame1</strong> – lame’s first parameter</p></li>
+<li><p><strong>nu</strong> – poisson’s ratio</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[K, E, G, and p-wave modulus]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of 4 floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tectonic_Utils.geodesy.linear_elastic.get_constants_from_lame1_and_pwave">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.linear_elastic.</span></span><span class="sig-name descname"><span class="pre">get_constants_from_lame1_and_pwave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lame1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_lame1_and_pwave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given lame1 (lambda) and P-wave modulus (M), what are the other elastic constants?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lame1</strong> – lame’s first parameter</p></li>
+<li><p><strong>M</strong> – p-wave modulus</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[K, E, G, and poisson’s ratio]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of 4 floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tectonic_Utils.geodesy.linear_elastic.get_constants_from_lame1_and_shear">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.linear_elastic.</span></span><span class="sig-name descname"><span class="pre">get_constants_from_lame1_and_shear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lame1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_lame1_and_shear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given lame1 (lambda) and shear modulus (G), what are the other elastic constants?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lame1</strong> – lame’s first parameter</p></li>
+<li><p><strong>G</strong> – shear modulus</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[K, E, poisson’s ratio, and p-wave modulus]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of 4 floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tectonic_Utils.geodesy.linear_elastic.get_constants_from_nu_and_pwave">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.linear_elastic.</span></span><span class="sig-name descname"><span class="pre">get_constants_from_nu_and_pwave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_nu_and_pwave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given shear modulus (G) and p-wave modulus (M), what are the other elastic constants?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nu</strong> – poisson’s ratio</p></li>
+<li><p><strong>M</strong> – p-wave modulus</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[K, E, G, and lame1]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of 4 floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tectonic_Utils.geodesy.linear_elastic.get_constants_from_shear_and_nu">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.linear_elastic.</span></span><span class="sig-name descname"><span class="pre">get_constants_from_shear_and_nu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_shear_and_nu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given shear modulus (G) and poisson’s ratio (nu), what are the other elastic constants?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> – shear modulus</p></li>
+<li><p><strong>nu</strong> – poisson’s ratio</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[K, E, lame1, and p-wave modulus]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of 4 floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tectonic_Utils.geodesy.linear_elastic.get_constants_from_shear_and_pwave">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.linear_elastic.</span></span><span class="sig-name descname"><span class="pre">get_constants_from_shear_and_pwave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_shear_and_pwave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given shear modulus (G) and p-wave modulus (M), what are the other elastic constants?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> – shear modulus</p></li>
+<li><p><strong>M</strong> – p-wave modulus</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[K, E, lame1, and pr]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of 4 floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tectonic_Utils.geodesy.linear_elastic.get_constants_from_youngs_and_lame1">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.linear_elastic.</span></span><span class="sig-name descname"><span class="pre">get_constants_from_youngs_and_lame1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lame1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_youngs_and_lame1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given Young’s modulus (E) and lame1 (lambda), what are the other elastic constants?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>E</strong> – Young’s modulus</p></li>
+<li><p><strong>lame1</strong> – lame’s first parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[K, G, poisson’s ratio, and p-wave modulus]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of 4 floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tectonic_Utils.geodesy.linear_elastic.get_constants_from_youngs_and_nu">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.linear_elastic.</span></span><span class="sig-name descname"><span class="pre">get_constants_from_youngs_and_nu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_youngs_and_nu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given Young’s modulus (E) and poisson’s ratio (nu), what are the other elastic constants?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>E</strong> – Young’s modulus</p></li>
+<li><p><strong>nu</strong> – poisson’s ratio</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[K, lame1, G, and p-wave modulus]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of 4 floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Tectonic_Utils.geodesy.linear_elastic.get_constants_from_youngs_and_shear">
+<span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.linear_elastic.</span></span><span class="sig-name descname"><span class="pre">get_constants_from_youngs_and_shear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_youngs_and_shear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given Young’s modulus (E) and shear modulus (G), what are the other elastic constants?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>E</strong> – Young’s modulus</p></li>
+<li><p><strong>G</strong> – shear modulus</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[K, lame1, poisson’s ratio, and p-wave modulus]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of 4 floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
 <div class="section" id="module-Tectonic_Utils.geodesy.utm_conversion">
-<span id="tectonic-utils-geodesy-utm-conversion-module"></span><h2>Tectonic_Utils.geodesy.utm_conversion module<a class="headerlink" href="#module-Tectonic_Utils.geodesy.utm_conversion" title="Permalink to this headline">¶</a></h2>
-<p>functions to support the conversion between utm coordinate system (meters) and lat/lon (degrees)</p>
+<span id="utm-conversion"></span><h2>utm_conversion<a class="headerlink" href="#module-Tectonic_Utils.geodesy.utm_conversion" title="Permalink to this headline">¶</a></h2>
+<p>Functions to support the conversion between utm coordinate system (meters) and lat/lon (degrees)</p>
+<p><strong>NOTE</strong>: I usually use GDALtransform and the Python equivalent instead of this module anymore. GDAL is safer.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.utm_conversion.deg2utm">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.utm_conversion.</span></span><span class="sig-name descname"><span class="pre">deg2utm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.utm_conversion.deg2utm" title="Permalink to this definition">¶</a></dt>
@@ -1246,9 +1585,9 @@ Aug/06: corrected m-Lint warnings</p>
 
 </div>
 <div class="section" id="module-Tectonic_Utils.geodesy.xyz2llh">
-<span id="tectonic-utils-geodesy-xyz2llh-module"></span><h2>Tectonic_Utils.geodesy.xyz2llh module<a class="headerlink" href="#module-Tectonic_Utils.geodesy.xyz2llh" title="Permalink to this headline">¶</a></h2>
-<p>Functions to convert between local enu, local llh, and global xyz coordinates
-Translated from Matlab</p>
+<span id="xyz2llh"></span><h2>xyz2llh<a class="headerlink" href="#module-Tectonic_Utils.geodesy.xyz2llh" title="Permalink to this headline">¶</a></h2>
+<p>Functions to convert between local enu, local llh, and global xyz coordinates.
+Translated from Matlab.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.xyz2llh.enu2xyz">
 <span class="sig-prename descclassname"><span class="pre">Tectonic_Utils.geodesy.xyz2llh.</span></span><span class="sig-name descname"><span class="pre">enu2xyz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcov</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.xyz2llh.enu2xyz" title="Permalink to this definition">¶</a></dt>
@@ -1378,9 +1717,6 @@ See DATUMS for more information on datum parameters.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="module-Tectonic_Utils.geodesy">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-Tectonic_Utils.geodesy" title="Permalink to this headline">¶</a></h2>
-</div>
 </div>
 
 
@@ -1388,6 +1724,10 @@ See DATUMS for more information on datum parameters.</p>
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="Tectonic_Utils.seismo.html" class="btn btn-neutral float-right" title="Tectonic_Utils.seismo package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Tectonic_Utils’s documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

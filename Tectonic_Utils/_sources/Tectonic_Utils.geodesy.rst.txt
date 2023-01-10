@@ -1,18 +1,8 @@
 Tectonic\_Utils.geodesy package
 ===============================
 
-Subpackages
------------
 
-.. toctree::
-   :maxdepth: 4
-
-   Tectonic_Utils.geodesy.test
-
-Submodules
-----------
-
-Tectonic\_Utils.geodesy.datums module
+datums
 -------------------------------------
 
 .. automodule:: Tectonic_Utils.geodesy.datums
@@ -20,7 +10,7 @@ Tectonic\_Utils.geodesy.datums module
    :undoc-members:
    :show-inheritance:
 
-Tectonic\_Utils.geodesy.euler\_pole module
+euler\_pole
 ------------------------------------------
 
 .. automodule:: Tectonic_Utils.geodesy.euler_pole
@@ -28,7 +18,7 @@ Tectonic\_Utils.geodesy.euler\_pole module
    :undoc-members:
    :show-inheritance:
 
-Tectonic\_Utils.geodesy.fault\_vector\_functions module
+fault\_vector\_functions
 -------------------------------------------------------
 
 .. automodule:: Tectonic_Utils.geodesy.fault_vector_functions
@@ -36,7 +26,7 @@ Tectonic\_Utils.geodesy.fault\_vector\_functions module
    :undoc-members:
    :show-inheritance:
 
-Tectonic\_Utils.geodesy.geojson2txt module
+geojson2txt
 ------------------------------------------
 
 .. automodule:: Tectonic_Utils.geodesy.geojson2txt
@@ -44,7 +34,7 @@ Tectonic\_Utils.geodesy.geojson2txt module
    :undoc-members:
    :show-inheritance:
 
-Tectonic\_Utils.geodesy.haversine module
+haversine
 ----------------------------------------
 
 .. automodule:: Tectonic_Utils.geodesy.haversine
@@ -52,7 +42,7 @@ Tectonic\_Utils.geodesy.haversine module
    :undoc-members:
    :show-inheritance:
 
-Tectonic\_Utils.geodesy.insar\_vector\_functions module
+insar\_vector\_functions
 -------------------------------------------------------
 
 .. automodule:: Tectonic_Utils.geodesy.insar_vector_functions
@@ -60,7 +50,15 @@ Tectonic\_Utils.geodesy.insar\_vector\_functions module
    :undoc-members:
    :show-inheritance:
 
-Tectonic\_Utils.geodesy.utm\_conversion module
+linear\_elastic
+----------------------------------------------
+
+.. automodule:: Tectonic_Utils.geodesy.linear_elastic
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+utm\_conversion
 ----------------------------------------------
 
 .. automodule:: Tectonic_Utils.geodesy.utm_conversion
@@ -68,7 +66,7 @@ Tectonic\_Utils.geodesy.utm\_conversion module
    :undoc-members:
    :show-inheritance:
 
-Tectonic\_Utils.geodesy.xyz2llh module
+xyz2llh
 --------------------------------------
 
 .. automodule:: Tectonic_Utils.geodesy.xyz2llh
@@ -76,10 +74,3 @@ Tectonic\_Utils.geodesy.xyz2llh module
    :undoc-members:
    :show-inheritance:
 
-Module contents
----------------
-
-.. automodule:: Tectonic_Utils.geodesy
-   :members:
-   :undoc-members:
-   :show-inheritance:

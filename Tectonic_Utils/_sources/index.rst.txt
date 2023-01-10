@@ -1,20 +1,34 @@
 .. Tectonic_Utils documentation master file, created by
-   sphinx-quickstart on Sun Mar  7 14:02:10 2021.
+   sphinx-quickstart on Sun Mar  7 14:02:10 2021. (Manually edited after that)
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Tectonic_Utils's documentation!
-==========================================
+Welcome to Tectonic_Utils's documentation
+=========================================
+
+Welcome to a ``Tectonic_Utils``, a simple library with utility functions for "everyday use" in active tectonics research. There are geodesy and seismology utility functions in Python, some originally from libraries in Matlab or other languages. There are read-write functions to access commonly used formats. Feel free to explore and use! 
+
+Disclaimer: Completely bug-free code can never be guaranteed. As things come up, I occasionally fix and update the package on Pip/PyPI. If you're using this package and you'd like to contribute or you find bugs, please let me know. 
+
+.. image:: ../../Tectonic_Utils/cover_picture.png
+  :width: 400
+  :alt: Types of functions inside Tectonic_Utils
 
 .. toctree::
+   :name: mastertoc
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Library Contents:
+   :glob:
+   
+   Tectonic_Utils.geodesy
+   Tectonic_Utils.seismo
+   Tectonic_Utils.read_write
 
 
 
 Indices and tables
 ==================
 
-* :ref:`genindex`
 * :ref:`modindex`
+* :ref:`genindex`
 * :ref:`search`

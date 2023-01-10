@@ -1,18 +1,7 @@
 Tectonic\_Utils.seismo package
 ==============================
 
-Subpackages
------------
-
-.. toctree::
-   :maxdepth: 4
-
-   Tectonic_Utils.seismo.test
-
-Submodules
-----------
-
-Tectonic\_Utils.seismo.MT\_calculations module
+MT\_calculations
 ----------------------------------------------
 
 .. automodule:: Tectonic_Utils.seismo.MT_calculations
@@ -20,7 +9,7 @@ Tectonic\_Utils.seismo.MT\_calculations module
    :undoc-members:
    :show-inheritance:
 
-Tectonic\_Utils.seismo.moment\_calculations module
+moment\_calculations
 --------------------------------------------------
 
 .. automodule:: Tectonic_Utils.seismo.moment_calculations
@@ -28,7 +17,7 @@ Tectonic\_Utils.seismo.moment\_calculations module
    :undoc-members:
    :show-inheritance:
 
-Tectonic\_Utils.seismo.second\_focal\_plane module
+second\_focal\_plane
 --------------------------------------------------
 
 .. automodule:: Tectonic_Utils.seismo.second_focal_plane
@@ -36,7 +25,7 @@ Tectonic\_Utils.seismo.second\_focal\_plane module
    :undoc-members:
    :show-inheritance:
 
-Tectonic\_Utils.seismo.wells\_and\_coppersmith module
+wells\_and\_coppersmith
 -----------------------------------------------------
 
 .. automodule:: Tectonic_Utils.seismo.wells_and_coppersmith
@@ -44,10 +33,3 @@ Tectonic\_Utils.seismo.wells\_and\_coppersmith module
    :undoc-members:
    :show-inheritance:
 
-Module contents
----------------
-
-.. automodule:: Tectonic_Utils.seismo
-   :members:
-   :undoc-members:
-   :show-inheritance:
