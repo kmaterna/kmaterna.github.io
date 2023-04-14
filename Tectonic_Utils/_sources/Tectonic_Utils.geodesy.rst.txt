@@ -58,10 +58,10 @@ linear\_elastic
    :undoc-members:
    :show-inheritance:
 
-utm\_conversion
+utilities
 ----------------------------------------------
 
-.. automodule:: Tectonic_Utils.geodesy.utm_conversion
+.. automodule:: Tectonic_Utils.geodesy.utilities
    :members:
    :undoc-members:
    :show-inheritance:

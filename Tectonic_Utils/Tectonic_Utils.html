@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Tectonic_Utils package &mdash; Tectonic_Utils 0.0.10 documentation</title>
+  <title>Tectonic_Utils package &mdash; Tectonic_Utils 0.1.0 documentation</title>
   
 
   
@@ -34,7 +35,9 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -85,7 +88,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Library Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Library Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Tectonic_Utils.geodesy.html">Tectonic_Utils.geodesy package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tectonic_Utils.seismo.html">Tectonic_Utils.seismo package</a></li>
@@ -157,44 +160,187 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tectonic-utils-package">
-<h1>Tectonic_Utils package<a class="headerlink" href="#tectonic-utils-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+  <section id="tectonic-utils-package">
+<h1>Tectonic_Utils package<a class="headerlink" href="#tectonic-utils-package" title="Permalink to this heading">¶</a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Tectonic_Utils.geodesy.html">Tectonic_Utils.geodesy package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.geodesy.html#module-Tectonic_Utils.geodesy.datums">datums</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.geodesy.html#module-Tectonic_Utils.geodesy.euler_pole">euler_pole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.geodesy.html#module-Tectonic_Utils.geodesy.fault_vector_functions">fault_vector_functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.geodesy.html#module-Tectonic_Utils.geodesy.geojson2txt">geojson2txt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.geodesy.html#module-Tectonic_Utils.geodesy.haversine">haversine</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.geodesy.html#module-Tectonic_Utils.geodesy.insar_vector_functions">insar_vector_functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.geodesy.html#module-Tectonic_Utils.geodesy.linear_elastic">linear_elastic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.geodesy.html#module-Tectonic_Utils.geodesy.utm_conversion">utm_conversion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.geodesy.html#module-Tectonic_Utils.geodesy.xyz2llh">xyz2llh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.geodesy.html#module-Tectonic_Utils.geodesy.datums">datums</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.datums.get_datums"><code class="docutils literal notranslate"><span class="pre">get_datums()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.geodesy.html#module-Tectonic_Utils.geodesy.euler_pole">euler_pole</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.euler_pole.degma2radyr"><code class="docutils literal notranslate"><span class="pre">degma2radyr()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.euler_pole.euler_pole_to_euler_vector"><code class="docutils literal notranslate"><span class="pre">euler_pole_to_euler_vector()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.euler_pole.euler_vector_to_euler_pole"><code class="docutils literal notranslate"><span class="pre">euler_vector_to_euler_pole()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.euler_pole.get_opposite_ep"><code class="docutils literal notranslate"><span class="pre">get_opposite_ep()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.euler_pole.get_r"><code class="docutils literal notranslate"><span class="pre">get_r()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.euler_pole.get_unit_east"><code class="docutils literal notranslate"><span class="pre">get_unit_east()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.euler_pole.point_rotation_by_Euler_Pole"><code class="docutils literal notranslate"><span class="pre">point_rotation_by_Euler_Pole()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.euler_pole.xyz2en"><code class="docutils literal notranslate"><span class="pre">xyz2en()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.geodesy.html#module-Tectonic_Utils.geodesy.fault_vector_functions">fault_vector_functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.add_vector_to_point"><code class="docutils literal notranslate"><span class="pre">add_vector_to_point()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.get_dip_degrees"><code class="docutils literal notranslate"><span class="pre">get_dip_degrees()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.get_dip_vector"><code class="docutils literal notranslate"><span class="pre">get_dip_vector()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.get_downdip_width"><code class="docutils literal notranslate"><span class="pre">get_downdip_width()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.get_leftlat_reverse_slip"><code class="docutils literal notranslate"><span class="pre">get_leftlat_reverse_slip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.get_plane_normal"><code class="docutils literal notranslate"><span class="pre">get_plane_normal()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.get_rake"><code class="docutils literal notranslate"><span class="pre">get_rake()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.get_rtlat_dip_slip"><code class="docutils literal notranslate"><span class="pre">get_rtlat_dip_slip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.get_strike"><code class="docutils literal notranslate"><span class="pre">get_strike()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.get_strike_length"><code class="docutils literal notranslate"><span class="pre">get_strike_length()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.get_strike_vector"><code class="docutils literal notranslate"><span class="pre">get_strike_vector()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.get_top_bottom_from_center"><code class="docutils literal notranslate"><span class="pre">get_top_bottom_from_center()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.get_top_bottom_from_top"><code class="docutils literal notranslate"><span class="pre">get_top_bottom_from_top()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.get_total_slip"><code class="docutils literal notranslate"><span class="pre">get_total_slip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.get_unit_vector"><code class="docutils literal notranslate"><span class="pre">get_unit_vector()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.get_vector_magnitude"><code class="docutils literal notranslate"><span class="pre">get_vector_magnitude()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.latlon2xy"><code class="docutils literal notranslate"><span class="pre">latlon2xy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.latlon2xy_single"><code class="docutils literal notranslate"><span class="pre">latlon2xy_single()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.simple_cross_product"><code class="docutils literal notranslate"><span class="pre">simple_cross_product()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.xy2lonlat"><code class="docutils literal notranslate"><span class="pre">xy2lonlat()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.fault_vector_functions.xy2lonlat_single"><code class="docutils literal notranslate"><span class="pre">xy2lonlat_single()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.geodesy.html#module-Tectonic_Utils.geodesy.geojson2txt">geojson2txt</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.geojson2txt.Downsampled_pixel"><code class="docutils literal notranslate"><span class="pre">Downsampled_pixel</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.geojson2txt.pixels_to_txt"><code class="docutils literal notranslate"><span class="pre">pixels_to_txt()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.geojson2txt.read_geojson"><code class="docutils literal notranslate"><span class="pre">read_geojson()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.geodesy.html#module-Tectonic_Utils.geodesy.haversine">haversine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.haversine.add_vector_to_coords"><code class="docutils literal notranslate"><span class="pre">add_vector_to_coords()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.haversine.calculate_endpoint_given_bearing"><code class="docutils literal notranslate"><span class="pre">calculate_endpoint_given_bearing()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.haversine.calculate_initial_compass_bearing"><code class="docutils literal notranslate"><span class="pre">calculate_initial_compass_bearing()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.haversine.distance"><code class="docutils literal notranslate"><span class="pre">distance()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.haversine.xy_distance"><code class="docutils literal notranslate"><span class="pre">xy_distance()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.geodesy.html#module-Tectonic_Utils.geodesy.insar_vector_functions">insar_vector_functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.insar_vector_functions.bearing_to_cartesian"><code class="docutils literal notranslate"><span class="pre">bearing_to_cartesian()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.insar_vector_functions.calc_lkv_from_rdr_azimuth_incidence"><code class="docutils literal notranslate"><span class="pre">calc_lkv_from_rdr_azimuth_incidence()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.insar_vector_functions.calc_rdr_azimuth_incidence_from_lkv_plane_down"><code class="docutils literal notranslate"><span class="pre">calc_rdr_azimuth_incidence_from_lkv_plane_down()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.insar_vector_functions.cartesian_to_ccw_from_north"><code class="docutils literal notranslate"><span class="pre">cartesian_to_ccw_from_north()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.insar_vector_functions.cartesian_to_heading"><code class="docutils literal notranslate"><span class="pre">cartesian_to_heading()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.insar_vector_functions.complement_angle"><code class="docutils literal notranslate"><span class="pre">complement_angle()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.insar_vector_functions.def3D_into_LOS"><code class="docutils literal notranslate"><span class="pre">def3D_into_LOS()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.insar_vector_functions.flight_incidence_angles2look_vector"><code class="docutils literal notranslate"><span class="pre">flight_incidence_angles2look_vector()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.insar_vector_functions.get_unit_vector_from_angle"><code class="docutils literal notranslate"><span class="pre">get_unit_vector_from_angle()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.insar_vector_functions.get_unit_vector_from_heading"><code class="docutils literal notranslate"><span class="pre">get_unit_vector_from_heading()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.insar_vector_functions.look_vector2flight_incidence_angles"><code class="docutils literal notranslate"><span class="pre">look_vector2flight_incidence_angles()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.insar_vector_functions.normalize_vector"><code class="docutils literal notranslate"><span class="pre">normalize_vector()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.insar_vector_functions.proj_los_into_vertical_no_horiz"><code class="docutils literal notranslate"><span class="pre">proj_los_into_vertical_no_horiz()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.insar_vector_functions.rotate_vector_by_angle"><code class="docutils literal notranslate"><span class="pre">rotate_vector_by_angle()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.geodesy.html#module-Tectonic_Utils.geodesy.linear_elastic">linear_elastic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_bulk_and_lame1"><code class="docutils literal notranslate"><span class="pre">get_constants_from_bulk_and_lame1()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_bulk_and_pr"><code class="docutils literal notranslate"><span class="pre">get_constants_from_bulk_and_pr()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_bulk_and_pwave"><code class="docutils literal notranslate"><span class="pre">get_constants_from_bulk_and_pwave()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_bulk_and_shear"><code class="docutils literal notranslate"><span class="pre">get_constants_from_bulk_and_shear()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_bulk_and_youngs"><code class="docutils literal notranslate"><span class="pre">get_constants_from_bulk_and_youngs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_lame1_and_nu"><code class="docutils literal notranslate"><span class="pre">get_constants_from_lame1_and_nu()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_lame1_and_pwave"><code class="docutils literal notranslate"><span class="pre">get_constants_from_lame1_and_pwave()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_lame1_and_shear"><code class="docutils literal notranslate"><span class="pre">get_constants_from_lame1_and_shear()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_nu_and_pwave"><code class="docutils literal notranslate"><span class="pre">get_constants_from_nu_and_pwave()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_shear_and_nu"><code class="docutils literal notranslate"><span class="pre">get_constants_from_shear_and_nu()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_shear_and_pwave"><code class="docutils literal notranslate"><span class="pre">get_constants_from_shear_and_pwave()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_youngs_and_lame1"><code class="docutils literal notranslate"><span class="pre">get_constants_from_youngs_and_lame1()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_youngs_and_nu"><code class="docutils literal notranslate"><span class="pre">get_constants_from_youngs_and_nu()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.linear_elastic.get_constants_from_youngs_and_shear"><code class="docutils literal notranslate"><span class="pre">get_constants_from_youngs_and_shear()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.geodesy.html#module-Tectonic_Utils.geodesy.utilities">utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.utilities.get_unit_vector"><code class="docutils literal notranslate"><span class="pre">get_unit_vector()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.utilities.get_vector_magnitude"><code class="docutils literal notranslate"><span class="pre">get_vector_magnitude()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.utilities.wrap_lon"><code class="docutils literal notranslate"><span class="pre">wrap_lon()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.geodesy.html#module-Tectonic_Utils.geodesy.xyz2llh">xyz2llh</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.xyz2llh.enu2xyz"><code class="docutils literal notranslate"><span class="pre">enu2xyz()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.xyz2llh.llh2xyz"><code class="docutils literal notranslate"><span class="pre">llh2xyz()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.xyz2llh.xyz2enu"><code class="docutils literal notranslate"><span class="pre">xyz2enu()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.xyz2llh.xyz2enum"><code class="docutils literal notranslate"><span class="pre">xyz2enum()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.geodesy.html#Tectonic_Utils.geodesy.xyz2llh.xyz2llh"><code class="docutils literal notranslate"><span class="pre">xyz2llh()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Tectonic_Utils.read_write.html">Tectonic_Utils.read_write package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.read_write.html#module-Tectonic_Utils.read_write.general_python_io_functions">general_python_io_functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.read_write.html#module-Tectonic_Utils.read_write.netcdf_read_write">netcdf_read_write</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.read_write.html#module-Tectonic_Utils.read_write.read_kml">read_kml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.read_write.html#module-Tectonic_Utils.read_write.general_io">general_io</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.read_write.html#Tectonic_Utils.read_write.general_io.read_gmt_multisegment_latlon"><code class="docutils literal notranslate"><span class="pre">read_gmt_multisegment_latlon()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.read_write.html#module-Tectonic_Utils.read_write.netcdf_read_write">netcdf_read_write</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.read_write.html#Tectonic_Utils.read_write.netcdf_read_write.flip_if_necessary"><code class="docutils literal notranslate"><span class="pre">flip_if_necessary()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.read_write.html#Tectonic_Utils.read_write.netcdf_read_write.give_metrics_on_grd"><code class="docutils literal notranslate"><span class="pre">give_metrics_on_grd()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.read_write.html#Tectonic_Utils.read_write.netcdf_read_write.parse_pixelnode_registration"><code class="docutils literal notranslate"><span class="pre">parse_pixelnode_registration()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.read_write.html#Tectonic_Utils.read_write.netcdf_read_write.produce_output_TS_grids"><code class="docutils literal notranslate"><span class="pre">produce_output_TS_grids()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.read_write.html#Tectonic_Utils.read_write.netcdf_read_write.produce_output_netcdf"><code class="docutils literal notranslate"><span class="pre">produce_output_netcdf()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.read_write.html#Tectonic_Utils.read_write.netcdf_read_write.produce_output_timeseries"><code class="docutils literal notranslate"><span class="pre">produce_output_timeseries()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.read_write.html#Tectonic_Utils.read_write.netcdf_read_write.properly_parse_three_variables"><code class="docutils literal notranslate"><span class="pre">properly_parse_three_variables()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.read_write.html#Tectonic_Utils.read_write.netcdf_read_write.read_3D_netcdf"><code class="docutils literal notranslate"><span class="pre">read_3D_netcdf()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.read_write.html#Tectonic_Utils.read_write.netcdf_read_write.read_any_grd"><code class="docutils literal notranslate"><span class="pre">read_any_grd()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.read_write.html#Tectonic_Utils.read_write.netcdf_read_write.read_netcdf3"><code class="docutils literal notranslate"><span class="pre">read_netcdf3()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.read_write.html#Tectonic_Utils.read_write.netcdf_read_write.read_netcdf4"><code class="docutils literal notranslate"><span class="pre">read_netcdf4()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.read_write.html#Tectonic_Utils.read_write.netcdf_read_write.write_netcdf4"><code class="docutils literal notranslate"><span class="pre">write_netcdf4()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.read_write.html#Tectonic_Utils.read_write.netcdf_read_write.write_temp_output_txt"><code class="docutils literal notranslate"><span class="pre">write_temp_output_txt()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.read_write.html#module-Tectonic_Utils.read_write.read_kml">read_kml</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.read_write.html#Tectonic_Utils.read_write.read_kml.read_simple_kml"><code class="docutils literal notranslate"><span class="pre">read_simple_kml()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Tectonic_Utils.seismo.html">Tectonic_Utils.seismo package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.seismo.html#module-Tectonic_Utils.seismo.MT_calculations">MT_calculations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.seismo.html#module-Tectonic_Utils.seismo.moment_calculations">moment_calculations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.seismo.html#module-Tectonic_Utils.seismo.second_focal_plane">second_focal_plane</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.seismo.html#module-Tectonic_Utils.seismo.wells_and_coppersmith">wells_and_coppersmith</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.seismo.html#module-Tectonic_Utils.seismo.MT_calculations">MT_calculations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.MT_calculations.decompose_iso_dc_clvd"><code class="docutils literal notranslate"><span class="pre">decompose_iso_dc_clvd()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.MT_calculations.diagonalize_MT"><code class="docutils literal notranslate"><span class="pre">diagonalize_MT()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.MT_calculations.get_MT"><code class="docutils literal notranslate"><span class="pre">get_MT()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.MT_calculations.get_clvd_dc_from_deviatoric_MT"><code class="docutils literal notranslate"><span class="pre">get_clvd_dc_from_deviatoric_MT()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.MT_calculations.get_deviatoric_MT"><code class="docutils literal notranslate"><span class="pre">get_deviatoric_MT()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.MT_calculations.get_iso_MT"><code class="docutils literal notranslate"><span class="pre">get_iso_MT()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.MT_calculations.get_percent_double_couple"><code class="docutils literal notranslate"><span class="pre">get_percent_double_couple()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.MT_calculations.get_total_scalar_moment"><code class="docutils literal notranslate"><span class="pre">get_total_scalar_moment()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.seismo.html#module-Tectonic_Utils.seismo.moment_calculations">moment_calculations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.moment_calculations.moment_from_muad"><code class="docutils literal notranslate"><span class="pre">moment_from_muad()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.moment_calculations.moment_from_mw"><code class="docutils literal notranslate"><span class="pre">moment_from_mw()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.moment_calculations.mw_from_moment"><code class="docutils literal notranslate"><span class="pre">mw_from_moment()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.seismo.html#module-Tectonic_Utils.seismo.second_focal_plane">second_focal_plane</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.second_focal_plane.find_aux_plane"><code class="docutils literal notranslate"><span class="pre">find_aux_plane()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.second_focal_plane.unit_vector"><code class="docutils literal notranslate"><span class="pre">unit_vector()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.second_focal_plane.vector_angle"><code class="docutils literal notranslate"><span class="pre">vector_angle()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.second_focal_plane.vector_norm"><code class="docutils literal notranslate"><span class="pre">vector_norm()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tectonic_Utils.seismo.html#module-Tectonic_Utils.seismo.wells_and_coppersmith">wells_and_coppersmith</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.wells_and_coppersmith.RA_from_M"><code class="docutils literal notranslate"><span class="pre">RA_from_M()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.wells_and_coppersmith.RLD_from_M"><code class="docutils literal notranslate"><span class="pre">RLD_from_M()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.wells_and_coppersmith.RW_from_M"><code class="docutils literal notranslate"><span class="pre">RW_from_M()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.wells_and_coppersmith.SLR_from_M"><code class="docutils literal notranslate"><span class="pre">SLR_from_M()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.wells_and_coppersmith.check_fault_types"><code class="docutils literal notranslate"><span class="pre">check_fault_types()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.wells_and_coppersmith.get_magnitude_from_rectangle"><code class="docutils literal notranslate"><span class="pre">get_magnitude_from_rectangle()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tectonic_Utils.seismo.html#Tectonic_Utils.seismo.wells_and_coppersmith.rectangular_slip"><code class="docutils literal notranslate"><span class="pre">rectangular_slip()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
-</div>
-<div class="section" id="module-Tectonic_Utils">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-Tectonic_Utils" title="Permalink to this headline">¶</a></h2>
-</div>
-</div>
+</section>
+<section id="module-Tectonic_Utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-Tectonic_Utils" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
 
 
            </div>

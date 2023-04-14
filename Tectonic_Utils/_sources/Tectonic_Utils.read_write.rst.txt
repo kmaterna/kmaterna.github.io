@@ -2,10 +2,10 @@ Tectonic\_Utils.read\_write package
 ===================================
 
 
-general\_python\_io\_functions
+general\_io
 -----------------------------------------------------------------
 
-.. automodule:: Tectonic_Utils.read_write.general_python_io_functions
+.. automodule:: Tectonic_Utils.read_write.general_io
    :members:
    :undoc-members:
    :show-inheritance:
