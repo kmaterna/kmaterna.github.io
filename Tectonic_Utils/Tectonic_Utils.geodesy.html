@@ -872,75 +872,12 @@ Will return 0 if dipslip,strikeslip == 0,0.</p>
 <li><p>geojson, produced by Kite after downsampling</p></li>
 <li><p>text representation, used for inversions</p></li>
 </ol>
-<dl class="py class namedtuple">
+<dl class="py class">
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.geojson2txt.Downsampled_pixel">
-<em class="property"><span class="pre">namedtuple</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Downsampled_pixel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mean</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">median</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">BL_corner</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TR_corner</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unitE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unitN</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unitU</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.geojson2txt.Downsampled_pixel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-func docutils literal notranslate"><span class="pre">namedtuple()</span></code></p>
-<p>A namedtuple object containing a quadtree-downsampled pixel, including
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Downsampled_pixel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mean</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">median</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">BL_corner</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TR_corner</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unitE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unitN</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unitU</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.geojson2txt.Downsampled_pixel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An object containing a quadtree-downsampled pixel, including
 downsampled pixel footprint, downsampled pixel look vector, and downsampled deformation values.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">mean</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em></dt>
-<dd><p>mean of LOS values within the pixel (meters)</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">median</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em></dt>
-<dd><p>median of LOS values within the pixel (meters)</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">std</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em></dt>
-<dd><p>standard deviation of LOS values within the pixel (meters)</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">BL_corner</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple,</span> <span class="pre">list,</span> <span class="pre">or</span> <span class="pre">array</span></em></dt>
-<dd><p>Coordinates of Bottom Left corner (longitude, latitude)</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TR_corner</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple,</span> <span class="pre">list,</span> <span class="pre">or</span> <span class="pre">array</span></em></dt>
-<dd><p>Coordinates of Top Right corner (longitude, latitude)</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">unitE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em></dt>
-<dd><p>east component of unit vector from ground to satellite</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">unitN</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em></dt>
-<dd><p>north component of unit vector from ground to satellite</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">unitU</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em></dt>
-<dd><p>up component of unit vector from ground to satellite</p>
-</dd></dl>
-
-<p>Downsampled_pixel(mean, median, std, BL_corner, TR_corner, unitE, unitN, unitU)</p>
-<dl class="field-list">
-<dt class="field-odd">Fields</dt>
-<dd class="field-odd"><span class="target" id="Tectonic_Utils.geodesy.geojson2txt.Downsampled_pixel.mean"></span><span class="target" id="Tectonic_Utils.geodesy.geojson2txt.Downsampled_pixel.median"></span><span class="target" id="Tectonic_Utils.geodesy.geojson2txt.Downsampled_pixel.std"></span><span class="target" id="Tectonic_Utils.geodesy.geojson2txt.Downsampled_pixel.BL_corner"></span><span class="target" id="Tectonic_Utils.geodesy.geojson2txt.Downsampled_pixel.TR_corner"></span><span class="target" id="Tectonic_Utils.geodesy.geojson2txt.Downsampled_pixel.unitE"></span><span class="target" id="Tectonic_Utils.geodesy.geojson2txt.Downsampled_pixel.unitN"></span><ol class="arabic simple" id="Tectonic_Utils.geodesy.geojson2txt.Downsampled_pixel.unitU" start="0">
-<li><p> <strong>mean</strong> – Alias for field number 0</p></li>
-<li><p> <strong>median</strong> – Alias for field number 1</p></li>
-<li><p> <strong>std</strong> – Alias for field number 2</p></li>
-<li><p> <strong>BL_corner</strong> – Alias for field number 3</p></li>
-<li><p> <strong>TR_corner</strong> – Alias for field number 4</p></li>
-<li><p> <strong>unitE</strong> – Alias for field number 5</p></li>
-<li><p> <strong>unitN</strong> – Alias for field number 6</p></li>
-<li><p> <strong>unitU</strong> – Alias for field number 7</p></li>
-</ol>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -1110,7 +1047,7 @@ Returns x and y in meters.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.geodesy.insar_vector_functions.calc_lkv_from_rdr_azimuth_incidence">
 <span class="sig-name descname"><span class="pre">calc_lkv_from_rdr_azimuth_incidence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">azimuth</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incidence</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.geodesy.insar_vector_functions.calc_lkv_from_rdr_azimuth_incidence" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function especially for UAVSAR interferograms to extract the lkv from azimuth/incidence.
+<dd><p>Function especially for ISCE interferograms to extract the lkv from azimuth/incidence.
 Convention: Azimuth angle measured from North in Anti-clockwise direction, in degrees, from ground to plane.
 Convention: Incidence angle measured from vertical at target.
 (aka degrees from vertical at satellite) (always +ve), in degrees.
@@ -1118,7 +1055,7 @@ lkve, lkvn, lkvu describe vector from ground to plane.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>azimuth</strong> (<em>float</em>) – CCW from north angle of vector from ground to plane, in degrees</p></li>
+<li><p><strong>azimuth</strong> (<em>float</em>) – CCW from north angle of vector from ground to plane, in degrees (ISCE LOS.RDR convention)</p></li>
 <li><p><strong>incidence</strong> (<em>float</em>) – angle from look vector to vertical, measured at the target (aka deg. from vertical at satellite)</p></li>
 </ul>
 </dd>

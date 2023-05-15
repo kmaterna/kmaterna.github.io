@@ -430,7 +430,8 @@ Note: Precision of 10 (or something high) ensures better performance for higher 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.read_kml.read_simple_kml">
 <span class="sig-name descname"><span class="pre">read_simple_kml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.read_kml.read_simple_kml" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read a simple box drawn in Google Earth and saved as a KML file with field ‘coordinates’.</p>
+<dd><p>Read a simple box drawn in Google Earth and saved as a KML file with field ‘coordinates’.
+For more complicated KMLs with many elements, I’m switching to use the Python library “fastkml” for reading.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>infile</strong> (<em>string</em>) – kml file with simple box</p>
