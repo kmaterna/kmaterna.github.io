@@ -1,201 +1,90 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Tectonic_Utils.read_write package &mdash; Tectonic_Utils 0.1.0 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Tectonic_Utils.seismo package" href="Tectonic_Utils.seismo.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="index.html" class="icon icon-home"> Tectonic_Utils
           
-
-          
+          <a href="index.html" class="icon icon-home">
+            Tectonic_Utils
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Library Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Tectonic_Utils.geodesy.html">Tectonic_Utils.geodesy package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tectonic_Utils.seismo.html">Tectonic_Utils.seismo package</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tectonic_Utils.read_write package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.read_write.general_io">general_io</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.read_write.general_io.read_gmt_multisegment_latlon"><code class="docutils literal notranslate"><span class="pre">read_gmt_multisegment_latlon()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.read_write.netcdf_read_write">netcdf_read_write</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.read_write.netcdf_read_write.flip_if_necessary"><code class="docutils literal notranslate"><span class="pre">flip_if_necessary()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.read_write.netcdf_read_write.give_metrics_on_grd"><code class="docutils literal notranslate"><span class="pre">give_metrics_on_grd()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.read_write.netcdf_read_write.parse_pixelnode_registration"><code class="docutils literal notranslate"><span class="pre">parse_pixelnode_registration()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.read_write.netcdf_read_write.produce_output_TS_grids"><code class="docutils literal notranslate"><span class="pre">produce_output_TS_grids()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.read_write.netcdf_read_write.produce_output_netcdf"><code class="docutils literal notranslate"><span class="pre">produce_output_netcdf()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.read_write.netcdf_read_write.produce_output_timeseries"><code class="docutils literal notranslate"><span class="pre">produce_output_timeseries()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.read_write.netcdf_read_write.properly_parse_three_variables"><code class="docutils literal notranslate"><span class="pre">properly_parse_three_variables()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.read_write.netcdf_read_write.read_3D_netcdf"><code class="docutils literal notranslate"><span class="pre">read_3D_netcdf()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.read_write.netcdf_read_write.read_any_grd"><code class="docutils literal notranslate"><span class="pre">read_any_grd()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.read_write.netcdf_read_write.read_netcdf3"><code class="docutils literal notranslate"><span class="pre">read_netcdf3()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.read_write.netcdf_read_write.read_netcdf4"><code class="docutils literal notranslate"><span class="pre">read_netcdf4()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.read_write.netcdf_read_write.write_netcdf4"><code class="docutils literal notranslate"><span class="pre">write_netcdf4()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.read_write.netcdf_read_write.write_temp_output_txt"><code class="docutils literal notranslate"><span class="pre">write_temp_output_txt()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.read_write.read_kml">read_kml</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.read_write.read_kml.read_simple_kml"><code class="docutils literal notranslate"><span class="pre">read_simple_kml()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.read_write.general_io">general_io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.read_write.netcdf_read_write">netcdf_read_write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.read_write.read_kml">read_kml</a></li>
 </ul>
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Tectonic_Utils</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
-      <li>Tectonic_Utils.read_write package</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Tectonic_Utils.read_write package</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="_sources/Tectonic_Utils.read_write.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <section id="tectonic-utils-read-write-package">
-<h1>Tectonic_Utils.read_write package<a class="headerlink" href="#tectonic-utils-read-write-package" title="Permalink to this heading">¶</a></h1>
+<h1>Tectonic_Utils.read_write package<a class="headerlink" href="#tectonic-utils-read-write-package" title="Permalink to this headline"></a></h1>
 <section id="module-Tectonic_Utils.read_write.general_io">
-<span id="general-io"></span><h2>general_io<a class="headerlink" href="#module-Tectonic_Utils.read_write.general_io" title="Permalink to this heading">¶</a></h2>
+<span id="general-io"></span><h2>general_io<a class="headerlink" href="#module-Tectonic_Utils.read_write.general_io" title="Permalink to this headline"></a></h2>
 <p>Functions to read common file types into structures in Python.
 Example: a multi-segment file with polygons or lines, as could be used in GMT.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.general_io.read_gmt_multisegment_latlon">
-<span class="sig-name descname"><span class="pre">read_gmt_multisegment_latlon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span> <span class="pre">'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.general_io.read_gmt_multisegment_latlon" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">read_gmt_multisegment_latlon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">split_delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span> <span class="pre">'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.general_io.read_gmt_multisegment_latlon" title="Permalink to this definition"></a></dt>
 <dd><p>Generalized GMT multisegment file reader.
 Returns lon and lat in a list of lists, each element with a single segment.</p>
 <dl class="field-list simple">
@@ -216,13 +105,13 @@ Returns lon and lat in a list of lists, each element with a single segment.</p>
 
 </section>
 <section id="module-Tectonic_Utils.read_write.netcdf_read_write">
-<span id="netcdf-read-write"></span><h2>netcdf_read_write<a class="headerlink" href="#module-Tectonic_Utils.read_write.netcdf_read_write" title="Permalink to this heading">¶</a></h2>
+<span id="netcdf-read-write"></span><h2>netcdf_read_write<a class="headerlink" href="#module-Tectonic_Utils.read_write.netcdf_read_write" title="Permalink to this headline"></a></h2>
 <p>Netcdf reading and writing functions.
 Only Netcdf3 and Netcdf4 files with PIXEL NODE REGISTRATION are valid.
 The assumption is 2D Netcdf files with 3 variables, in x-y-z order.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.flip_if_necessary">
-<span class="sig-name descname"><span class="pre">flip_if_necessary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.flip_if_necessary" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">flip_if_necessary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.flip_if_necessary" title="Permalink to this definition"></a></dt>
 <dd><p>If netcdf3 file is stored with xinc or yinc backwards, we replace with a copy that flips the affected axis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -233,7 +122,7 @@ The assumption is 2D Netcdf files with 3 variables, in x-y-z order.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.give_metrics_on_grd">
-<span class="sig-name descname"><span class="pre">give_metrics_on_grd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.give_metrics_on_grd" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">give_metrics_on_grd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.give_metrics_on_grd" title="Permalink to this definition"></a></dt>
 <dd><p>Print shape, min/max, and NaN metrics on a netcdf grid file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -244,7 +133,7 @@ The assumption is 2D Netcdf files with 3 variables, in x-y-z order.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.parse_pixelnode_registration">
-<span class="sig-name descname"><span class="pre">parse_pixelnode_registration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.parse_pixelnode_registration" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">parse_pixelnode_registration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.parse_pixelnode_registration" title="Permalink to this definition"></a></dt>
 <dd><p>Ensure pixel node registration for netcdf file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -255,7 +144,7 @@ The assumption is 2D Netcdf files with 3 variables, in x-y-z order.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.produce_output_TS_grids">
-<span class="sig-name descname"><span class="pre">produce_output_TS_grids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ydata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timearray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zunits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.produce_output_TS_grids" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">produce_output_TS_grids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ydata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timearray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zunits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.produce_output_TS_grids" title="Permalink to this definition"></a></dt>
 <dd><p>Write many netcdf3 files, one for each step of a timearray. Each file will be named with a datetime suffix.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -273,7 +162,7 @@ The assumption is 2D Netcdf files with 3 variables, in x-y-z order.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.produce_output_netcdf">
-<span class="sig-name descname"><span class="pre">produce_output_netcdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ydata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zunits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">netcdfname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype=&lt;class</span> <span class="pre">'float'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.produce_output_netcdf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">produce_output_netcdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ydata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zunits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">netcdfname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype=&lt;class</span> <span class="pre">'float'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.produce_output_netcdf" title="Permalink to this definition"></a></dt>
 <dd><p>Write netcdf3 grid file.
 NOTE: The pixel vs gridline registration of this function is not guaranteed;
 depends on file system and float type and precision :(.
@@ -282,7 +171,7 @@ Safer to use write_netcdf4().</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.produce_output_timeseries">
-<span class="sig-name descname"><span class="pre">produce_output_timeseries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ydata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timearray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zunits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">netcdfname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.produce_output_timeseries" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">produce_output_timeseries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ydata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timearray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zunits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">netcdfname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.produce_output_timeseries" title="Permalink to this definition"></a></dt>
 <dd><p>Write dataset with t, x, y, z into large 3D netcdf.
 Each 2D slice is the displacement at a particular time, associated with a time series.
 zdata comes in as a 2D array where each element is a timeseries (1D array), so it must be re-packaged into
@@ -304,7 +193,7 @@ Broke during long SoCal experiment for some reason. f.close() didn’t work.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.properly_parse_three_variables">
-<span class="sig-name descname"><span class="pre">properly_parse_three_variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.properly_parse_three_variables" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">properly_parse_three_variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.properly_parse_three_variables" title="Permalink to this definition"></a></dt>
 <dd><p>Set proper ordering for known keys in a netcdf file. Options: [x, y, z]; [lon, lat, z]; [longitude, latitude, z].</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -325,7 +214,7 @@ Broke during long SoCal experiment for some reason. f.close() didn’t work.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.read_3D_netcdf">
-<span class="sig-name descname"><span class="pre">read_3D_netcdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.read_3D_netcdf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">read_3D_netcdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.read_3D_netcdf" title="Permalink to this definition"></a></dt>
 <dd><p>Reading function for 3D netcdf pixel-node registered files with key pattern ‘t, x, y, z’.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -342,7 +231,7 @@ Broke during long SoCal experiment for some reason. f.close() didn’t work.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.read_any_grd">
-<span class="sig-name descname"><span class="pre">read_any_grd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.read_any_grd" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">read_any_grd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.read_any_grd" title="Permalink to this definition"></a></dt>
 <dd><p>A general netcdf4/netcdf3 reading function for pixel-node registered files with recognized key patterns.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -359,7 +248,7 @@ Broke during long SoCal experiment for some reason. f.close() didn’t work.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.read_netcdf3">
-<span class="sig-name descname"><span class="pre">read_netcdf3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.read_netcdf3" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">read_netcdf3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.read_netcdf3" title="Permalink to this definition"></a></dt>
 <dd><p>A netcdf3 reading function for pixel-node registered files with recognized key patterns.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -376,7 +265,7 @@ Broke during long SoCal experiment for some reason. f.close() didn’t work.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.read_netcdf4">
-<span class="sig-name descname"><span class="pre">read_netcdf4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.read_netcdf4" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">read_netcdf4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.read_netcdf4" title="Permalink to this definition"></a></dt>
 <dd><p>A netcdf4 reading function for pixel-node registered files with recognized key patterns.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -393,7 +282,7 @@ Broke during long SoCal experiment for some reason. f.close() didn’t work.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.write_netcdf4">
-<span class="sig-name descname"><span class="pre">write_netcdf4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.write_netcdf4" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">write_netcdf4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.write_netcdf4" title="Permalink to this definition"></a></dt>
 <dd><p>Writing PIXEL NODE registered netcdf4 file from numpy array.
 Internal strategy: send out to a binary file and make GMT convert to netcdf.
 Note: Precision of 10 (or something high) ensures better performance for higher latitudes, like &gt;60°.</p>
@@ -412,7 +301,7 @@ Note: Precision of 10 (or something high) ensures better performance for higher 
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.netcdf_read_write.write_temp_output_txt">
-<span class="sig-name descname"><span class="pre">write_temp_output_txt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.write_temp_output_txt" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">write_temp_output_txt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.netcdf_read_write.write_temp_output_txt" title="Permalink to this definition"></a></dt>
 <dd><p>A helper function for dumping grid data into pixel-node-registered grd files.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -426,10 +315,10 @@ Note: Precision of 10 (or something high) ensures better performance for higher 
 
 </section>
 <section id="module-Tectonic_Utils.read_write.read_kml">
-<span id="read-kml"></span><h2>read_kml<a class="headerlink" href="#module-Tectonic_Utils.read_write.read_kml" title="Permalink to this heading">¶</a></h2>
+<span id="read-kml"></span><h2>read_kml<a class="headerlink" href="#module-Tectonic_Utils.read_write.read_kml" title="Permalink to this headline"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.read_write.read_kml.read_simple_kml">
-<span class="sig-name descname"><span class="pre">read_simple_kml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.read_kml.read_simple_kml" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">read_simple_kml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.read_write.read_kml.read_simple_kml" title="Permalink to this definition"></a></dt>
 <dd><p>Read a simple box drawn in Google Earth and saved as a KML file with field ‘coordinates’.
 For more complicated KMLs with many elements, I’m switching to use the Python library “fastkml” for reading.</p>
 <dl class="field-list simple">
@@ -450,49 +339,32 @@ For more complicated KMLs with many elements, I’m switching to use the Python 
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Tectonic_Utils.seismo.html" class="btn btn-neutral float-left" title="Tectonic_Utils.seismo package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, Kathryn Materna.
-
-    </p>
+    <p>&#169; Copyright 2021, Kathryn Materna.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

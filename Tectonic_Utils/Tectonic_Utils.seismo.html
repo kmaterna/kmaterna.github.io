@@ -1,207 +1,87 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Tectonic_Utils.seismo package &mdash; Tectonic_Utils 0.1.0 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Tectonic_Utils.read_write package" href="Tectonic_Utils.read_write.html" />
     <link rel="prev" title="Tectonic_Utils.geodesy package" href="Tectonic_Utils.geodesy.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="index.html" class="icon icon-home"> Tectonic_Utils
           
-
-          
+          <a href="index.html" class="icon icon-home">
+            Tectonic_Utils
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Library Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Tectonic_Utils.geodesy.html">Tectonic_Utils.geodesy package</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tectonic_Utils.seismo package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.seismo.MT_calculations">MT_calculations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.MT_calculations.decompose_iso_dc_clvd"><code class="docutils literal notranslate"><span class="pre">decompose_iso_dc_clvd()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.MT_calculations.diagonalize_MT"><code class="docutils literal notranslate"><span class="pre">diagonalize_MT()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.MT_calculations.get_MT"><code class="docutils literal notranslate"><span class="pre">get_MT()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.MT_calculations.get_clvd_dc_from_deviatoric_MT"><code class="docutils literal notranslate"><span class="pre">get_clvd_dc_from_deviatoric_MT()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.MT_calculations.get_deviatoric_MT"><code class="docutils literal notranslate"><span class="pre">get_deviatoric_MT()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.MT_calculations.get_iso_MT"><code class="docutils literal notranslate"><span class="pre">get_iso_MT()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.MT_calculations.get_percent_double_couple"><code class="docutils literal notranslate"><span class="pre">get_percent_double_couple()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.MT_calculations.get_total_scalar_moment"><code class="docutils literal notranslate"><span class="pre">get_total_scalar_moment()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.seismo.moment_calculations">moment_calculations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.moment_calculations.moment_from_muad"><code class="docutils literal notranslate"><span class="pre">moment_from_muad()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.moment_calculations.moment_from_mw"><code class="docutils literal notranslate"><span class="pre">moment_from_mw()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.moment_calculations.mw_from_moment"><code class="docutils literal notranslate"><span class="pre">mw_from_moment()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.seismo.second_focal_plane">second_focal_plane</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.second_focal_plane.find_aux_plane"><code class="docutils literal notranslate"><span class="pre">find_aux_plane()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.second_focal_plane.unit_vector"><code class="docutils literal notranslate"><span class="pre">unit_vector()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.second_focal_plane.vector_angle"><code class="docutils literal notranslate"><span class="pre">vector_angle()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.second_focal_plane.vector_norm"><code class="docutils literal notranslate"><span class="pre">vector_norm()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.seismo.wells_and_coppersmith">wells_and_coppersmith</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.wells_and_coppersmith.RA_from_M"><code class="docutils literal notranslate"><span class="pre">RA_from_M()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.wells_and_coppersmith.RLD_from_M"><code class="docutils literal notranslate"><span class="pre">RLD_from_M()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.wells_and_coppersmith.RW_from_M"><code class="docutils literal notranslate"><span class="pre">RW_from_M()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.wells_and_coppersmith.SLR_from_M"><code class="docutils literal notranslate"><span class="pre">SLR_from_M()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.wells_and_coppersmith.check_fault_types"><code class="docutils literal notranslate"><span class="pre">check_fault_types()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.wells_and_coppersmith.get_magnitude_from_rectangle"><code class="docutils literal notranslate"><span class="pre">get_magnitude_from_rectangle()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Tectonic_Utils.seismo.wells_and_coppersmith.rectangular_slip"><code class="docutils literal notranslate"><span class="pre">rectangular_slip()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.seismo.MT_calculations">MT_calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.seismo.moment_calculations">moment_calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.seismo.second_focal_plane">second_focal_plane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Tectonic_Utils.seismo.wells_and_coppersmith">wells_and_coppersmith</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Tectonic_Utils.read_write.html">Tectonic_Utils.read_write package</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Tectonic_Utils</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
-      <li>Tectonic_Utils.seismo package</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Tectonic_Utils.seismo package</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="_sources/Tectonic_Utils.seismo.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <section id="tectonic-utils-seismo-package">
-<h1>Tectonic_Utils.seismo package<a class="headerlink" href="#tectonic-utils-seismo-package" title="Permalink to this heading">¶</a></h1>
+<h1>Tectonic_Utils.seismo package<a class="headerlink" href="#tectonic-utils-seismo-package" title="Permalink to this headline"></a></h1>
 <section id="module-Tectonic_Utils.seismo.MT_calculations">
-<span id="mt-calculations"></span><h2>MT_calculations<a class="headerlink" href="#module-Tectonic_Utils.seismo.MT_calculations" title="Permalink to this heading">¶</a></h2>
+<span id="mt-calculations"></span><h2>MT_calculations<a class="headerlink" href="#module-Tectonic_Utils.seismo.MT_calculations" title="Permalink to this headline"></a></h2>
 <p>Calculations that deal with seismic moment tensors.
 Notes from Lay and Wallace Chapter 8:</p>
 <ul class="simple">
@@ -215,7 +95,7 @@ Notes from Lay and Wallace Chapter 8:</p>
 <p>The most useful in practice are Decomposition 1 and Decomposition 6.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.MT_calculations.decompose_iso_dc_clvd">
-<span class="sig-name descname"><span class="pre">decompose_iso_dc_clvd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MT</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.decompose_iso_dc_clvd" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">decompose_iso_dc_clvd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MT</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.decompose_iso_dc_clvd" title="Permalink to this definition"></a></dt>
 <dd><p>Decompose a full moment tensor into an isotropic part, a double-couple, and a CLVD component.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -226,7 +106,7 @@ Notes from Lay and Wallace Chapter 8:</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.MT_calculations.diagonalize_MT">
-<span class="sig-name descname"><span class="pre">diagonalize_MT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MT</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.diagonalize_MT" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">diagonalize_MT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MT</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.diagonalize_MT" title="Permalink to this definition"></a></dt>
 <dd><p>Build a diagonal matrix whose elements are the ordered eigenvalues of original matrix MT.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -237,7 +117,7 @@ Notes from Lay and Wallace Chapter 8:</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.MT_calculations.get_MT">
-<span class="sig-name descname"><span class="pre">get_MT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mrr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mtt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mpp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mrt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mrp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mtp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.get_MT" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_MT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mrr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mtt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mpp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mrt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mrp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mtp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.get_MT" title="Permalink to this definition"></a></dt>
 <dd><p>Build a matrix from the six components of the moment tensor</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -248,7 +128,7 @@ Notes from Lay and Wallace Chapter 8:</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.MT_calculations.get_clvd_dc_from_deviatoric_MT">
-<span class="sig-name descname"><span class="pre">get_clvd_dc_from_deviatoric_MT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MT</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.get_clvd_dc_from_deviatoric_MT" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_clvd_dc_from_deviatoric_MT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MT</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.get_clvd_dc_from_deviatoric_MT" title="Permalink to this definition"></a></dt>
 <dd><p>Calculate the dc and clvd components of a deviatoric MT, from Shearer Equation 9.14.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -259,7 +139,7 @@ Notes from Lay and Wallace Chapter 8:</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.MT_calculations.get_deviatoric_MT">
-<span class="sig-name descname"><span class="pre">get_deviatoric_MT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MT</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.get_deviatoric_MT" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_deviatoric_MT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MT</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.get_deviatoric_MT" title="Permalink to this definition"></a></dt>
 <dd><p>Get deviatoric MT from a full MT.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -270,7 +150,7 @@ Notes from Lay and Wallace Chapter 8:</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.MT_calculations.get_iso_MT">
-<span class="sig-name descname"><span class="pre">get_iso_MT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MT</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.get_iso_MT" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_iso_MT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MT</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.get_iso_MT" title="Permalink to this definition"></a></dt>
 <dd><p>Calculate the isotropic moment tensor from a full MT.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -281,7 +161,7 @@ Notes from Lay and Wallace Chapter 8:</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.MT_calculations.get_percent_double_couple">
-<span class="sig-name descname"><span class="pre">get_percent_double_couple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MT</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.get_percent_double_couple" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_percent_double_couple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MT</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.get_percent_double_couple" title="Permalink to this definition"></a></dt>
 <dd><p>Get the percent double couple and percent clvd moment from a deviatoric moment tensor.
 When isotropic term is involved, this can get more complicated and there are several approaches.
 See Shearer equation 9.17 for epsilon.
@@ -301,7 +181,7 @@ See Vavrycuk, 2001 for other approaches when isotropic component is involved.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.MT_calculations.get_total_scalar_moment">
-<span class="sig-name descname"><span class="pre">get_total_scalar_moment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MT</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.get_total_scalar_moment" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_total_scalar_moment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MT</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.MT_calculations.get_total_scalar_moment" title="Permalink to this definition"></a></dt>
 <dd><p>Shearer Equation 9.8: quadratic sum of element of moment tensor components, in newton-meters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -318,11 +198,11 @@ See Vavrycuk, 2001 for other approaches when isotropic component is involved.</p
 
 </section>
 <section id="module-Tectonic_Utils.seismo.moment_calculations">
-<span id="moment-calculations"></span><h2>moment_calculations<a class="headerlink" href="#module-Tectonic_Utils.seismo.moment_calculations" title="Permalink to this heading">¶</a></h2>
+<span id="moment-calculations"></span><h2>moment_calculations<a class="headerlink" href="#module-Tectonic_Utils.seismo.moment_calculations" title="Permalink to this headline"></a></h2>
 <p>Utilities that convert between moment and magnitude, etc.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.moment_calculations.moment_from_muad">
-<span class="sig-name descname"><span class="pre">moment_from_muad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.moment_calculations.moment_from_muad" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">moment_from_muad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.moment_calculations.moment_from_muad" title="Permalink to this definition"></a></dt>
 <dd><p>moment = mu * A * d.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -343,8 +223,8 @@ See Vavrycuk, 2001 for other approaches when isotropic component is involved.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.moment_calculations.moment_from_mw">
-<span class="sig-name descname"><span class="pre">moment_from_mw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Mw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.moment_calculations.moment_from_mw" title="Permalink to this definition">¶</a></dt>
-<dd><p>Definition of moment magnitude. Takes magnitude, returns moment in newton-meters.</p>
+<span class="sig-name descname"><span class="pre">moment_from_mw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Mw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.moment_calculations.moment_from_mw" title="Permalink to this definition"></a></dt>
+<dd><p>Definition of moment magnitude from Hanks and Kanamori (1979). Takes magnitude, returns moment in newton-meters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>Mw</strong> (<em>float</em>) – moment magnitude</p>
@@ -360,8 +240,8 @@ See Vavrycuk, 2001 for other approaches when isotropic component is involved.</p
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.moment_calculations.mw_from_moment">
-<span class="sig-name descname"><span class="pre">mw_from_moment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moment</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.moment_calculations.mw_from_moment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Definition of moment magnitude. Takes newton-meters, returns moment magnitude.</p>
+<span class="sig-name descname"><span class="pre">mw_from_moment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moment</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.moment_calculations.mw_from_moment" title="Permalink to this definition"></a></dt>
+<dd><p>Definition of moment magnitude from Hanks and Kanamori (1979). Takes newton-meters, returns moment magnitude.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>moment</strong> (<em>float</em>) – moment in Newton-meters</p>
@@ -377,13 +257,13 @@ See Vavrycuk, 2001 for other approaches when isotropic component is involved.</p
 
 </section>
 <section id="module-Tectonic_Utils.seismo.second_focal_plane">
-<span id="second-focal-plane"></span><h2>second_focal_plane<a class="headerlink" href="#module-Tectonic_Utils.seismo.second_focal_plane" title="Permalink to this heading">¶</a></h2>
+<span id="second-focal-plane"></span><h2>second_focal_plane<a class="headerlink" href="#module-Tectonic_Utils.seismo.second_focal_plane" title="Permalink to this headline"></a></h2>
 <p>Utility tool for computing the second possible strike, rake, and dip in a focal mechanism,
 given the strike, rake, and dip of the first focal plane.
 Inspiration from Vince Cronin’s website.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.second_focal_plane.find_aux_plane">
-<span class="sig-name descname"><span class="pre">find_aux_plane</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rake</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.second_focal_plane.find_aux_plane" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">find_aux_plane</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rake</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.second_focal_plane.find_aux_plane" title="Permalink to this definition"></a></dt>
 <dd><p>Find the second auxiliary plane in a double couple focal mechanism from the given slip plane/vector.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -404,25 +284,25 @@ Inspiration from Vince Cronin’s website.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.second_focal_plane.unit_vector">
-<span class="sig-name descname"><span class="pre">unit_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.second_focal_plane.unit_vector" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">unit_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.second_focal_plane.unit_vector" title="Permalink to this definition"></a></dt>
 <dd><p>Computes unit vector associated with 3-component vector.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.second_focal_plane.vector_angle">
-<span class="sig-name descname"><span class="pre">vector_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.second_focal_plane.vector_angle" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">vector_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.second_focal_plane.vector_angle" title="Permalink to this definition"></a></dt>
 <dd><p>Returns angle between two vectors, in radians.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.second_focal_plane.vector_norm">
-<span class="sig-name descname"><span class="pre">vector_norm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.second_focal_plane.vector_norm" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">vector_norm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.second_focal_plane.vector_norm" title="Permalink to this definition"></a></dt>
 <dd><p>Computes norm of vector.</p>
 </dd></dl>
 
 </section>
 <section id="module-Tectonic_Utils.seismo.wells_and_coppersmith">
-<span id="wells-and-coppersmith"></span><h2>wells_and_coppersmith<a class="headerlink" href="#module-Tectonic_Utils.seismo.wells_and_coppersmith" title="Permalink to this heading">¶</a></h2>
+<span id="wells-and-coppersmith"></span><h2>wells_and_coppersmith<a class="headerlink" href="#module-Tectonic_Utils.seismo.wells_and_coppersmith" title="Permalink to this headline"></a></h2>
 <p>Set of functions that calculate important scaling relationships between earthquake magnitude and other parameters.
 From Wells and Coppersmith, 1994.</p>
 <ul class="simple">
@@ -435,7 +315,7 @@ From Wells and Coppersmith, 1994.</p>
 <p>Average displacements, Max displacements, and inverse relationships not included.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.wells_and_coppersmith.RA_from_M">
-<span class="sig-name descname"><span class="pre">RA_from_M</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fault_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.wells_and_coppersmith.RA_from_M" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">RA_from_M</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fault_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.wells_and_coppersmith.RA_from_M" title="Permalink to this definition"></a></dt>
 <dd><p>Rupture Area from Magnitude, computed using log(RA)=a + b*M</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -455,7 +335,7 @@ From Wells and Coppersmith, 1994.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.wells_and_coppersmith.RLD_from_M">
-<span class="sig-name descname"><span class="pre">RLD_from_M</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fault_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.wells_and_coppersmith.RLD_from_M" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">RLD_from_M</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fault_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.wells_and_coppersmith.RLD_from_M" title="Permalink to this definition"></a></dt>
 <dd><p>Subsurface rupture length from Magnitude, computed using log(RLD)=a + b*M</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -475,7 +355,7 @@ From Wells and Coppersmith, 1994.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.wells_and_coppersmith.RW_from_M">
-<span class="sig-name descname"><span class="pre">RW_from_M</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fault_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.wells_and_coppersmith.RW_from_M" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">RW_from_M</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fault_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.wells_and_coppersmith.RW_from_M" title="Permalink to this definition"></a></dt>
 <dd><p>Downdip rupture width from Magnitude, computed using log(RW)=a + b*M</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -495,7 +375,7 @@ From Wells and Coppersmith, 1994.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.wells_and_coppersmith.SLR_from_M">
-<span class="sig-name descname"><span class="pre">SLR_from_M</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fault_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.wells_and_coppersmith.SLR_from_M" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">SLR_from_M</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fault_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.wells_and_coppersmith.SLR_from_M" title="Permalink to this definition"></a></dt>
 <dd><p>Surface rupture width from Magnitude, computed using log(SLR)=a + b*M</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -515,13 +395,13 @@ From Wells and Coppersmith, 1994.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.wells_and_coppersmith.check_fault_types">
-<span class="sig-name descname"><span class="pre">check_fault_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fault_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.wells_and_coppersmith.check_fault_types" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">check_fault_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fault_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.wells_and_coppersmith.check_fault_types" title="Permalink to this definition"></a></dt>
 <dd><p>Ensure that provided fault type is within [“SS”, “N”, “R”, “ALL”]</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.wells_and_coppersmith.get_magnitude_from_rectangle">
-<span class="sig-name descname"><span class="pre">get_magnitude_from_rectangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30000000000.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.wells_and_coppersmith.get_magnitude_from_rectangle" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_magnitude_from_rectangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30000000000.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.wells_and_coppersmith.get_magnitude_from_rectangle" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -542,7 +422,7 @@ From Wells and Coppersmith, 1994.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="Tectonic_Utils.seismo.wells_and_coppersmith.rectangular_slip">
-<span class="sig-name descname"><span class="pre">rectangular_slip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30000000000.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.wells_and_coppersmith.rectangular_slip" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">rectangular_slip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30000000000.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tectonic_Utils.seismo.wells_and_coppersmith.rectangular_slip" title="Permalink to this definition"></a></dt>
 <dd><p>Magnitude to slip on rectangular patch</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -567,50 +447,33 @@ From Wells and Coppersmith, 1994.</p>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="Tectonic_Utils.read_write.html" class="btn btn-neutral float-right" title="Tectonic_Utils.read_write package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Tectonic_Utils.geodesy.html" class="btn btn-neutral float-left" title="Tectonic_Utils.geodesy package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Tectonic_Utils.read_write.html" class="btn btn-neutral float-right" title="Tectonic_Utils.read_write package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, Kathryn Materna.
-
-    </p>
+    <p>&#169; Copyright 2021, Kathryn Materna.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
